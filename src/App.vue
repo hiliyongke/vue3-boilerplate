@@ -1,10 +1,9 @@
 <template>
-  <router-view></router-view>
+  <router-view />
 </template>
 <script setup lang="ts">
 // import { useAppStore } from './store/modules/app'
 // const appStore = useAppStore()
-
 
 // provide('reload', reload)
 // function reload() {

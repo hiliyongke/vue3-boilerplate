@@ -1,23 +1,23 @@
 <template>
   <a-layout-footer class="footer">
     <SvgIcon name="svg-github" size="24" style="margin-right: 10px" />
-    <router-link to="https://github.com/tobe-fe-dalao/Vue3-Boilerplate"
-      >Vue3-Boilerplate</router-link
-    >
+    <router-link to="https://github.com/tobe-fe-dalao/Vue3-Boilerplate">
+      Vue3-Boilerplate
+    </router-link>
   </a-layout-footer>
 </template>
 
 <script setup lang="ts">
-  import SvgIcon from '@components/SvgIcon/index.vue'
+import SvgIcon from '@components/SvgIcon/index.vue';
 </script>
 
 <style lang="less" scoped>
-  .footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    color: var(--color-text-2);
-    text-align: center;
-  }
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  color: var(--color-text-2);
+  text-align: center;
+}
 </style>

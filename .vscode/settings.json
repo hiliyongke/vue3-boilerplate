@@ -1,4 +1,6 @@
 {
+  "workbench.iconTheme": "vs-seti",
+  "explorer.confirmDragAndDrop": false,
   "typescript.tsdk": "./node_modules/typescript/lib",
   "volar.tsPlugin": true,
   "volar.tsPluginStatus": false,
@@ -6,6 +8,13 @@
   "editor.tabSize": 2,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "files.eol": "\n",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.format.enable": true,
+  "eslint.options": {
+    "extensions": [".js", ".jsx", ".ts", ".tsx"]
+  },
   "search.exclude": {
     "**/node_modules": true,
     "**/*.log": true,
@@ -83,9 +92,6 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
   "[vue]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true,
@@ -93,15 +99,6 @@
     },
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "i18n-ally.localesPaths": ["src/locales/lang"],
-  "i18n-ally.keystyle": "nested",
-  "i18n-ally.sortKeys": true,
-  "i18n-ally.namespace": true,
-  "i18n-ally.pathMatcher": "{locale}/{namespaces}.{ext}",
-  "i18n-ally.enabledParsers": ["ts"],
-  "i18n-ally.sourceLanguage": "en",
-  "i18n-ally.displayLanguage": "zh-CN",
-  "i18n-ally.enabledFrameworks": ["vue", "react"],
   "cSpell.words": [
     "vben",
     "windi",

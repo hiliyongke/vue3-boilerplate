@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import { version } from "../../package.json"
-import SvgIcon from "@components/SvgIcon/index.vue"
-import { useAppStore } from '@/store/modules/app'
-import { framework } from "./data"
-import Header from "@components/Header/index.vue"
+import { version } from '../../package.json';
+import SvgIcon from '@components/SvgIcon/index.vue';
+import { useAppStore } from '@/store/modules/app';
+import { framework } from './data';
+import Header from '@components/Header/index.vue';
 
-const appStore = useAppStore()
-const data = ref(framework)
-
+const appStore = useAppStore();
+const data = ref(framework);
 </script>
 <template>
   <div class="dark:text-slate-400 dark:bg-slate-900">
@@ -20,9 +19,13 @@ const data = ref(framework)
           {{ appStore.h1 }}
           <span
             class="absolute text-2xl tracking-wide version lg:text-4xl bg-gradient-to-br from-fuchsia-500 to-purple-600"
-          >{{ `V${version}` }}</span>
+          >
+            {{ `V${version}` }}
+          </span>
         </h1>
-        <p class="text-2xl text-slate-800 dark:text-slate-400">最新Vue3技术流，超全配置，大厂协作规范，大佬必备神器</p>
+        <p class="text-2xl text-slate-800 dark:text-slate-400">
+          最新Vue3技术流，超全配置，大厂协作规范，大佬必备神器
+        </p>
       </div>
     </main>
     <article class="space-y-20 sm:space-y-32 md:space-y-40 lg:space-y-44">
@@ -39,7 +42,7 @@ const data = ref(framework)
               class="px-6 py-8 text-lg font-semibold leading-8 bg-white rounded-t-xl md:p-5 md:text-base md:leading-8 text-slate-700 dark:text-slate-300 dark:bg-slate-800 dark:highlight-white/5"
             >
               <SvgIcon name="svg-marks" />
-              <p v-html="item.content"></p>
+              <p>{{ item.content }}</p>
             </blockquote>
             <figcaption
               class="flex items-center p-6 space-x-4 leading-6 text-white md:px-10 md:py-6 bg-gradient-to-br rounded-b-xl"
@@ -73,8 +76,7 @@ const data = ref(framework)
 </template>
 
 <style lang="less" scoped>
-body{
-  
+body {
 }
 .version {
   display: inline-block;

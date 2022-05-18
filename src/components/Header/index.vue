@@ -1,40 +1,40 @@
 <script setup lang="ts">
-  import SvgIcon from '../SvgIcon/index.vue'
-  import { ref } from 'vue'
-  import { useDark, useToggle } from '@vueuse/core'
-  import { useAppStore, useUserStore } from '@/store'
-  import { IconMoonFill, IconSunFill } from '@arco-design/web-vue/es/icon'
-  const title = ref('I want to study typescript')
-  // 检测浏览器系统主题
-  const darkThemeMq = window.matchMedia('(prefers-color-scheme: dark)')
-  const appStore = useAppStore()
-  const useStore = useUserStore()
-  const theme = computed(() => {
-    return appStore.theme
-  })
-  const isDark = useDark({
-    selector: 'body',
-    attribute: 'arco-theme',
-    valueDark: 'dark',
-    valueLight: 'light',
-    storageKey: 'arco-theme',
-    onChanged(dark: boolean) {
-      appStore.toggleTheme(dark)
-    },
-  })
-  const toggleTheme = useToggle(isDark)
-  // const setVisible = () => {
-  //   appStore.updateSettings({ globalSettings: true });
-  // };
-  const ThemeChange = (val: string | number | boolean) => {
-    if (!val) {
-      document.documentElement.classList.add('dark')
-      document.body.setAttribute('arco-theme', 'dark')
-    } else {
-      document.body.removeAttribute('arco-theme')
-      document.documentElement.classList.remove('dark')
-    }
+import SvgIcon from '../SvgIcon/index.vue';
+import { ref } from 'vue';
+import { useDark, useToggle } from '@vueuse/core';
+import { useAppStore, useUserStore } from '@/store';
+import { IconMoonFill, IconSunFill } from '@arco-design/web-vue/es/icon';
+const title = ref('I want to study typescript');
+// 检测浏览器系统主题
+const darkThemeMq = window.matchMedia('(prefers-color-scheme: dark)');
+const appStore = useAppStore();
+const useStore = useUserStore();
+const theme = computed(() => {
+  return appStore.theme;
+});
+const isDark = useDark({
+  selector: 'body',
+  attribute: 'arco-theme',
+  valueDark: 'dark',
+  valueLight: 'light',
+  storageKey: 'arco-theme',
+  onChanged(dark: boolean) {
+    appStore.toggleTheme(dark);
   }
+});
+const toggleTheme = useToggle(isDark);
+// const setVisible = () => {
+//   appStore.updateSettings({ globalSettings: true });
+// };
+const ThemeChange = (val: string | number | boolean) => {
+  if (!val) {
+    document.documentElement.classList.add('dark');
+    document.body.setAttribute('arco-theme', 'dark');
+  } else {
+    document.body.removeAttribute('arco-theme');
+    document.documentElement.classList.remove('dark');
+  }
+};
 </script>
 
 <template>
@@ -50,20 +50,21 @@
             <router-link
               to="/"
               class="mr-3 flex-none w-[2.0625rem] md:w-auto leading-6 dark:text-slate-200"
-              >Vue3-Boilerplate</router-link
             >
+              Vue3-Boilerplate
+            </router-link>
             <div class="relative items-center hidden ml-auto lg:flex">
               <nav class="text-sm font-semibold leading-6 text-slate-700 dark:text-slate-200">
                 <ul class="flex space-x-8">
                   <li>
-                    <router-link to="/demo" class="hover:text-sky-500 dark:hover:text-sky-400"
-                      >GithubDemo</router-link
-                    >
+                    <router-link to="/demo" class="hover:text-sky-500 dark:hover:text-sky-400">
+                      GithubDemo
+                    </router-link>
                   </li>
                   <li>
-                    <router-link to="/login" class="hover:text-sky-500 dark:hover:text-sky-400"
-                      >Login</router-link
-                    >
+                    <router-link to="/login" class="hover:text-sky-500 dark:hover:text-sky-400">
+                      Login
+                    </router-link>
                   </li>
                 </ul>
               </nav>
@@ -101,26 +102,26 @@
 </template>
 
 <style lang="less">
-  .prose {
-    color: #334155;
-    font-size: 0.875em;
-    font-variant-ligatures: none;
-    code {
-      color: #0f172a;
-      font-family: Fira Code VF, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-        Liberation Mono, Courier New, monospace;
-      &::before {
-        content: '`';
-      }
-      &::after {
-        content: '`';
-      }
+.prose {
+  color: #334155;
+  font-size: 0.875em;
+  font-variant-ligatures: none;
+  code {
+    color: #0f172a;
+    font-family: Fira Code VF, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      Liberation Mono, Courier New, monospace;
+    &::before {
+      content: '`';
     }
-    &.dark\:prose-dark {
-      color: #94a3b8;
-      code {
-        color: #e2e8f0;
-      }
+    &::after {
+      content: '`';
     }
   }
+  &.dark\:prose-dark {
+    color: #94a3b8;
+    code {
+      color: #e2e8f0;
+    }
+  }
+}
 </style>

@@ -8,28 +8,28 @@
 const props = defineProps({
   prefix: {
     type: String,
-    default: 'icon',
+    default: 'icon'
   },
   name: {
     type: String,
-    required: true,
+    required: true
   },
   color: {
     type: String,
-    default: '#333',
+    default: '#333'
   },
   size: {
     type: String,
-    default: 'default',
-  },
-})
-const symbolId = computed(() => `#${props.prefix}-${props.name}`)
+    default: 'default'
+  }
+});
+const symbolId = computed(() => `#${props.prefix}-${props.name}`);
 const calsses = computed(() => {
   return {
-    [`sdms-size-${props.size}`]: props.size,
-  }
-})
-const fontSize = reactive({ default: '32px', small: '20px', large: '48px' })
+    [`sdms-size-${props.size}`]: props.size
+  };
+});
+const fontSize = reactive({ default: '32px', small: '20px', large: '48px' });
 </script>
 <style lang="less" scoped>
 .svg-icon-spin {

@@ -1,32 +1,32 @@
-// @ts-check
-const { defineConfig } = require('eslint-define-config')
+const { defineConfig } = require('eslint-define-config');
 module.exports = defineConfig({
   root: true,
   env: {
     browser: true,
     node: true,
-    es6: true,
+    es6: true
   },
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
-    ecmaVersion: 2020,
+    ecmaVersion: 2021,
     sourceType: 'module',
     jsxPragma: 'React',
     ecmaFeatures: {
-      jsx: true,
-    },
+      jsx: true
+    }
   },
   extends: [
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier',
-    'plugin:prettier/recommended',
-    'plugin:jest/recommended',
+    'plugin:prettier/recommended'
+    // 'plugin:jest/recommended'
   ],
+  plugins: ['prettier'],
   rules: {
     'vue/script-setup-uses-vars': 'error',
-    'prettier/prettier': ['error', { endOfLine: 'off' }],
+    'prettier/prettier': ['error', { endOfLine: 'auto' }],
     '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
@@ -39,20 +39,9 @@ module.exports = defineConfig({
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-unused-vars': [
-      'error',
-      {
-        argsIgnorePattern: '^_',
-        varsIgnorePattern: '^_',
-      },
-    ],
-    'no-unused-vars': [
-      'error',
-      {
-        argsIgnorePattern: '^_',
-        varsIgnorePattern: '^_',
-      },
-    ],
+    '@typescript-eslint/no-unused-vars': ['off'],
+    '@typescript-eslint/no-empty-interface': ['off'],
+    'no-unused-vars': ['off'],
     'space-before-function-paren': 'off',
 
     'vue/attributes-order': 'off',
@@ -70,12 +59,12 @@ module.exports = defineConfig({
         html: {
           void: 'always',
           normal: 'never',
-          component: 'always',
+          component: 'always'
         },
         svg: 'always',
-        math: 'always',
-      },
+        math: 'always'
+      }
     ],
-    'vue/multi-word-component-names': 'off',
-  },
-})
+    'vue/multi-word-component-names': 'off'
+  }
+});

@@ -26,11 +26,11 @@ module.exports = {
     },
     {
       value: ':white_check_mark: test',
-      name: '✅  test:     Add missing tests or correcting existing tests'
+      name: '✅  test:     添加缺失的测试或纠正现有的测试'
     },
     {
       value: ':chart_with_upwards_trend: perf',
-      name: '📈 perf:     A code change that improves performance'
+      name: '📈  perf:     性能优化'
     },
     {
       value: ':thought_balloon: chore',
@@ -38,19 +38,15 @@ module.exports = {
     },
     {
       value: ':lipstick: ui',
-      name: '💄 Updating the UI and style files.'
+      name: '💄  Updating  更新UI和样式文件'
     },
     {
       value: ':art: style',
-      name: '🎨 Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)'
+      name: '🎨  Changes   不影响代码含义的代码(空格、格式设置、缺少分号等)'
     },
     {
       value: 'revert',
-      name: '⏪  revert:   Revert to a commit'
-    },
-    {
-      value: ':package: dep_up',
-      name: '📦 Updating compiled files or packages.'
+      name: '⏪  revert:   代码回滚'
     },
     {
       value: ':wrench: CI',
@@ -71,7 +67,7 @@ module.exports = {
     type: '选择一种你的提交类型:',
     scope: '选择一个scope (可选):',
     // used if allowCustomScopes is true
-    customScope: 'Denote the SCOPE of this change:',
+    customScope: '此次更改范围::',
     subject: '短说明:\n',
     body: '长说明，使用"|"换行(可选)：\n',
     breaking: '非兼容性说明 (可选):\n',

@@ -82,7 +82,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,vue,ts,tsx}": [
-      "yarn lint",
+      "npm run lint",
       "prettier --write"
     ]
   },

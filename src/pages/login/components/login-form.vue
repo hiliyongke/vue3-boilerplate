@@ -1,6 +1,6 @@
 <template>
   <div class="login-form-wrapper">
-    <div class="login-form-title">欢迎登录Fast-Vue3</div>
+    <div class="login-form-title">欢迎登录Vue3-Boilerplate</div>
     <div class="login-form-sub-title">一个开箱即用的Vue3+Vite+...模板</div>
     <div class="login-form-error-msg">{{ errorMessage }}</div>
     <el-form
@@ -65,7 +65,7 @@
     ],
   })
   const handleSubmit = async (formEl: FormInstance | undefined) => {
-      console.log(formEl)
+    console.log(formEl)
     if (!formEl) return
     await formEl.validate((valid, field) => {
       if (valid) {

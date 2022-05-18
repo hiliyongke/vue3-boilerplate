@@ -1,28 +1,6 @@
-<p align="center">
-    <img  src="https://cdn.jsdelivr.net/gh/MaleWeb/picture/images/techblog/fast-vue3.svg" width="340" />
-</p>
-
-<p align="center">  
-    <img src="https://img.shields.io/badge/-Vue3-34495e?logo=vue.j" />
-    <img src="https://img.shields.io/badge/-Vite2.7-646cff?logo=vite&logoColor=white" />
-    <img src="https://img.shields.io/badge/-TypeScript-blue?logo=typescript&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Pinia-yellow?logo=picpay&logoColor=white" />
-    <img src="https://img.shields.io/badge/-ESLint-4b32c3?logo=eslint&logoColor=white" />
-    <img src="https://img.shields.io/badge/-pnpm-F69220?logo=pnpm&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Axios-008fc7?logo=axios.js&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Prettier-ef9421?logo=Prettier&logoColor=white" alt="Prettier">
-    <img src="https://img.shields.io/badge/-Less-1D365D?logo=less&logoColor=white" alt="Less">
-    <img src="https://img.shields.io/badge/-Tailwind%20CSS-06B6D4?logo=Tailwind%20CSS&logoColor=white" alt="Taiwind">
-    <img src="" alt="">
-<p>
-
-一个开箱即用，快速搭建大型应用的 Vue3+Vite2+TypeScript+...模板框架。集成了各类插件，并进行了模块化和按需加载的优化，可以放心使用。 [更新文档](https://github.com/tobe-fe-dalao/fast-vue3/blob/main/docs/update.md) |  [在线运行](https://stackblitz.com/github/tobe-fe-dalao/fast-vue3?terminal=dev)
-
- 简体中文| [English](./README.en.md)  | [日本語](./README.ja-JP.md)
+一个开箱即用，快速搭建大型应用的 Vue3+Vite2+TypeScript+...模板框架。集成了各类插件，并进行了模块化和按需加载的优化，可以放心使用。
 
 # 功能亮点
-
-这里简单介绍一些核心部分，安装部分不再细讲，建议大家直接阅读官方文档或[可视化仓库](https://github1s.com/tobe-fe-dalao/fast-vue3)
 
 ## 🪂 大厂协作-代码规范
 
@@ -102,7 +80,7 @@ export const AutoRegistryComponents = () => {
 
 ## 🧩Vite 插件模块化
 
-为了方便管理插件，将所有的`config`统一放入`config/vite/plugins`里面，未来还会有更多插件直接分文件夹管理十分干净。值得一提的是，`Fast-Vue3`增加了统一环境变量管理，来区分动态开启某些插件。
+为了方便管理插件，将所有的`config`统一放入`config/vite/plugins`里面，未来还会有更多插件直接分文件夹管理十分干净。值得一提的是，`Vue3-Boilerplate`增加了统一环境变量管理，来区分动态开启某些插件。
 
 ```typescript
 // vite/plugins/index.ts
@@ -435,14 +413,14 @@ export default init
 
 # 使用
 
-一键三连: Star 或 Fork 或 [可视化仓库](https://github1s.com/tobe-fe-dalao/fast-vue3)
+一键三连: Star 或 Fork 或 [可视化仓库](https://github1s.com/tobe-fe-dalao/Vue3-Boilerplate)
 
 ```shell
 # 拉取仓库代码
-git clone  https://github.com/tobe-fe-dalao/fast-vue3.git
+git clone  https://github.com/tobe-fe-dalao/Vue3-Boilerplate.git
 
 # 进入项目文件夹
-cd fast-vue3
+cd Vue3-Boilerplate
 
 # 安装项目依赖
 pnpm install
@@ -457,7 +435,7 @@ pnpm run dev
 
 ```
 # clone  template 分支
-git clone -b template https://github.com/tobe-fe-dalao/fast-vue3.git
+git clone -b template https://github.com/tobe-fe-dalao/Vue3-Boilerplate.git
 ```
 
 # 工具库
@@ -468,17 +446,11 @@ git clone -b template https://github.com/tobe-fe-dalao/fast-vue3.git
 
 - [pnpm](https://pnpm.io/)，一个依赖包全局管理的工具，老板再也不用担心我的 C 盘不够用。Vite 官方推荐，字节官方前端团队大规模项目考验
 
-![image-20220110125758056](https://cdn.jsdelivr.net/gh/MaleWeb/picture/images/techblog/image-20220110125758056.png)
-
 - [mitt 全局事件监听库](https://github.com/developit/mitt)，Vue3 官方推荐
 - [Hammer](http://hammerjs.github.io/)，可以识别由触摸、鼠标和指针事件做出的手势,只有 7.34kb
 - [outils](https://github.com/proYang/outils)，开发中常用的函数集，也可以使用`lodash`
 
 - [tailwindcss](https://tailwindcss.com/)，艾玛香的一塌糊涂，一行 css 不写，3 分钟出一个页面。不适合初中级前端，建议还是先踏实学基础再用框架。
-
-  ![tailwindcss-1](https://cdn.jsdelivr.net/gh/MaleWeb/picture/images/techblog/tailwindcss-1.gif)
-
-  ![tailwindcss-2](https://cdn.jsdelivr.net/gh/MaleWeb/picture/images/techblog/tailwindcss-2.gif)
 
 - [Vue I18n](https://vue-i18n.intlify.dev/) 是 Vue.js 的国际化插件，如果你想做开源框架，国际化首选插件。
 
@@ -486,11 +458,9 @@ git clone -b template https://github.com/tobe-fe-dalao/fast-vue3.git
 
 - [Vitest](https://github.com/vitest-dev/vitest),基于 Vite 的单元测试工具，目前迭代比较快，尤大金牌赞助。可以持续关注，不建议使用在小项目中。
 
-  ![image-20220110125605172](https://cdn.jsdelivr.net/gh/MaleWeb/picture/images/techblog/image-20220110125605172.png)
-
 # UI 库
 
-- [arco-design](https://github.com/arco-design/arco-design)，字节团队新出的 UI 框架,配置层面更为灵活,`fast-vue3`使用的就是这个,不喜欢的小伙伴可以移除
+- [arco-design](https://github.com/arco-design/arco-design)，字节团队新出的 UI 框架,配置层面更为灵活,`Vue3-Boilerplate`使用的就是这个,不喜欢的小伙伴可以移除
 - [semi-design](https://github.com/DouyinFE/semi-design)，抖音前端出的框架，面向经常撕逼 UI 和 FE，可以尝鲜玩玩
 - [nutui](https://github.com/jdf2e/nutui)，京东前端团队出的 UI 框架，已升级到 3.X，个人认为颜值最高并接受反驳
 - [naive-ui](https://github.com/TuSimple/naive-ui)，尤大推荐，TypeScript 语法，主题可调，这家公司挺厉害
@@ -499,30 +469,3 @@ git clone -b template https://github.com/tobe-fe-dalao/fast-vue3.git
 # 资料
 
 - 官方配置文档入口[vite](https://vitejs.cn/config/)、[pinia](https://pinia.vuejs.org/introduction.html)、[vue-router4](https://next.router.vuejs.org/zh/introduction.html)、[plop](https://github.com/plopjs/plop)...
-- 更详细的配置手册:https://juejin.cn/post/7036745610954801166
-- vu3 写组件实践案例:https://juejin.cn/post/7052717075168493598  
-
-
-# 贡献者
-
-这个项目的存在要感谢所有做出贡献的人。
-
-并感谢我们所有的支持者! 🙏
-
-<a href="https://github.com/study-vue3/fast-vue3/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=study-vue3/fast-vue3" />
-</a>
-
-# 最后
-
-- 欢迎加群[前端水友群](https://link.juejin.cn?target=https%3A%2F%2Fp3-juejin.byteimg.com%2Ftos-cn-i-k3u1fbpfcp%2Ff2747d1a5fcf4d9894e997b140b8a0d8~tplv-k3u1fbpfcp-zoom-1.image 'https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f2747d1a5fcf4d9894e997b140b8a0d8~tplv-k3u1fbpfcp-zoom-1.image')，划水，大家一起划水，现在粉丝群甚少讨论技术，那么我们就一起水吧。欢迎关注我的公众号[扫地盲僧](https://link.juejin.cn?target=https%3A%2F%2Fp3-juejin.byteimg.com%2Ftos-cn-i-k3u1fbpfcp%2Fa08fd56556654baa86975b2a5ba6a8f0~tplv-k3u1fbpfcp-watermark.image%2522 'https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a08fd56556654baa86975b2a5ba6a8f0~tplv-k3u1fbpfcp-watermark.image%22')。
-
-- 前沿技术，各类体验、互动相关的技术，各类译文、研报的提前透视。
-- 白嫖，承诺发布的所有付费资源，粉丝群统统免费白嫖，不然大家谁有时间跟你玩，嘿嘿。
-
-<p>
-<img width="360" src="https://cdn.jsdelivr.net/gh/MaleWeb/picture/images/techblog/varqun.jpg">
-</p>
-<p>
-<img width="360" src="https://cdn.jsdelivr.net/gh/MaleWeb/picture/images/techblog/扫地盲僧公众号.png">
-</p>

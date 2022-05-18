@@ -1,10 +1,10 @@
 {
-  "name": "create-fast-vue3",
+  "name": "create-Vue3-Boilerplate",
   "type": "module",
   "version": "0.0.13",
-  "description": "a easy way to create vue3 project based of fast-vue3 template",
+  "description": "a easy way to create vue3 project based of Vue3-Boilerplate template",
   "bin": {
-    "create-fast-vue3": "outfile.cjs"
+    "create-Vue3-Boilerplate": "outfile.cjs"
   },
   "files": [
     "outfile.cjs"
@@ -16,13 +16,13 @@
   "keywords": [
     "vue3",
     "vite",
-    "fast-vue3"
+    "Vue3-Boilerplate"
   ],
-  "homepage": "https://github.com/study-vue3/fast-vue3/tree/main/packages/create-fast-vue3#readme",
+  "homepage": "https://github.com/study-vue3/Vue3-Boilerplate/tree/main/packages/create-Vue3-Boilerplate#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/study-vue3/fast-vue3.git",
-    "directory": "packages/create-fast-vue3"
+    "url": "git+https://github.com/study-vue3/Vue3-Boilerplate.git",
+    "directory": "packages/create-Vue3-Boilerplate"
   },
   "author": "liulei",
   "license": "MIT",

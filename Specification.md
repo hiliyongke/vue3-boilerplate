@@ -37,7 +37,8 @@ npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
 ... "scripts": { "commit": "cz" }
 
 安装指令和命令行的展示信息 git-cz
-
+全局安装
+npm install -g commitizen
 自定义提交规范 https://github.com/leoforfree/cz-customizable npm i -D commitlint-config-cz cz-customizable "config": { "commitizen": { "path": "node_modules/cz-customizable" } }
 
 extends: ['@commitlint/config-conventional'], =====> extends: ['cz'],

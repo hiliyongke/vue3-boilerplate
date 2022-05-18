@@ -6,23 +6,23 @@ module.exports = {
     },
     {
       value: ':sparkles: feat',
-      name: '✨  feat:     A new feature'
+      name: '✨  feat:     新增一个功能'
     },
     {
       value: ':bug: fix',
-      name: '🐛  fix:      A bug fix'
+      name: '🐛  fix:      修复一个Bug'
     },
     {
       value: ':hammer: refactor',
-      name: '🔨  refactor: A code change that neither fixes a bug nor adds a feature'
+      name: '🔨  refactor: 代码重构'
     },
     {
       value: ':pencil: docs',
-      name: '📝  docs:     Documentation only changes'
+      name: '📝  docs:     文档变更'
     },
     {
       value: ':twisted_rightwards_arrows: merge',
-      name: '🔀  merge:     Merge a branch code'
+      name: '🔀  merge:    合并分支'
     },
     {
       value: ':white_check_mark: test',
@@ -34,7 +34,7 @@ module.exports = {
     },
     {
       value: ':thought_balloon: chore',
-      name: "🗯  chore:    Changes that don't modify src or test files. Such as updating build tasks, package manager"
+      name: '🗯  chore:    变更构建流程或辅助工具'
     },
     {
       value: ':lipstick: ui',
@@ -54,7 +54,7 @@ module.exports = {
     },
     {
       value: ':wrench: CI',
-      name: '🔧  Project structure change（CI, Buiding, Tool...）'
+      name: '🔧  更改持续集成软件的配置文件和package中的scripts命令，例如scopes: Travis, Circle等'
     },
     {
       value: ':truck: mv',

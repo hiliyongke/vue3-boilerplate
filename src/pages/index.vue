@@ -9,7 +9,7 @@ const appStore = useAppStore();
 const data = ref(framework);
 </script>
 <template>
-  <div class="dark:text-slate-400 dark:bg-slate-900">
+  <div>
     <Header />
     <main class="max-w-5xl px-4 mx-auto pb-22 sm:px-6 md:px-8 xl:px-12 xl:max-w-6xl">
       <div class="pt-8 pb-7 sm:pb-8 sm:text-center">

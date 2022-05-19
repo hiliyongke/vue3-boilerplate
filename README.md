@@ -431,13 +431,6 @@ pnpm run dev
 
 如果不报错，恭喜你点火成功。否则，请看下面常见问题。
 
-如果你已经了解本模板，建议你拉取  `template`  分支进行项目开发，该分支不含任何示例代码。
-
-```
-# clone  template 分支
-git clone -b template https://github.com/hiliyongke/vue3-boilerplate.git
-```
-
 # 工具库
 
 学会使用适当的工具库，让`coding`事半功倍。尤其是开源的工具库，值得每个人学习，因为这本身就是你应该达到的层次。这里推荐一些大厂常用的类库，因为我喜新...，以下工具均可直接引入。

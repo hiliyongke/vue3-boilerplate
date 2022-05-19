@@ -56,7 +56,7 @@
 
 ```typescript
 //模块化写法
-import Components from 'unplugin-vue-components/vite'
+import Components from 'unplugin-vue-components/vite';
 export const AutoRegistryComponents = () => {
   return Components({
     extensions: ['vue', 'md'],
@@ -69,13 +69,13 @@ export const AutoRegistryComponents = () => {
     exclude: [/[\\/]node_modules[\\/]/, /[\\/]\.git[\\/]/, /[\\/]\.nuxt[\\/]/],
     resolvers: [
       IconsResolver({
-        componentPrefix: '',
+        componentPrefix: ''
       }),
       ArcoResolver({ importStyle: 'less' }), //根据你需要增加UI框架
-      VueUseComponentsResolver(), //默认使用VueUse组件
-    ],
-  })
-}
+      VueUseComponentsResolver() //默认使用VueUse组件
+    ]
+  });
+};
 ```
 
 ## 🧩Vite 插件模块化
@@ -88,18 +88,18 @@ export const AutoRegistryComponents = () => {
  * @name createVitePlugins
  * @description 封装plugins数组统一调用
  */
-import type { Plugin } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
-import { ConfigSvgIconsPlugin } from './svgIcons'
-import { AutoRegistryComponents } from './component'
-import { AutoImportDeps } from './autoImport'
-import { ConfigMockPlugin } from './mock'
-import { ConfigVisualizerConfig } from './visualizer'
-import { ConfigCompressPlugin } from './compress'
-import { ConfigPagesPlugin } from './pages'
-import { ConfigMarkDownPlugin } from './markdown'
-import { ConfigRestartPlugin } from './restart'
+import type { Plugin } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
+import { ConfigSvgIconsPlugin } from './svgIcons';
+import { AutoRegistryComponents } from './component';
+import { AutoImportDeps } from './autoImport';
+import { ConfigMockPlugin } from './mock';
+import { ConfigVisualizerConfig } from './visualizer';
+import { ConfigCompressPlugin } from './compress';
+import { ConfigPagesPlugin } from './pages';
+import { ConfigMarkDownPlugin } from './markdown';
+import { ConfigRestartPlugin } from './restart';
 
 export function createVitePlugins(isBuild: boolean) {
   const vitePlugins: (Plugin | Plugin[])[] = [
@@ -118,15 +118,15 @@ export function createVitePlugins(isBuild: boolean) {
     //支持markdown
     ConfigMarkDownPlugin(),
     // 监听配置文件改动重启
-    ConfigRestartPlugin(),
-  ]
+    ConfigRestartPlugin()
+  ];
   // vite-plugin-svg-icons
-  vitePlugins.push(ConfigSvgIconsPlugin(isBuild))
+  vitePlugins.push(ConfigSvgIconsPlugin(isBuild));
   // vite-plugin-mock
-  vitePlugins.push(ConfigMockPlugin(isBuild))
+  vitePlugins.push(ConfigMockPlugin(isBuild));
   // rollup-plugin-visualizer
-  vitePlugins.push(ConfigVisualizerConfig())
-  return vitePlugins
+  vitePlugins.push(ConfigVisualizerConfig());
+  return vitePlugins;
 }
 ```
 
@@ -157,28 +157,28 @@ return {
 
 ```typescript
 // 支持模块化，配合plop可以通过命令行一键生成
-import { createPinia } from 'pinia'
-import { useAppStore } from './modules/app'
-import { useUserStore } from './modules/user'
-const pinia = createPinia()
-export { useAppStore, useUserStore }
-export default pinia
+import { createPinia } from 'pinia';
+import { useAppStore } from './modules/app';
+import { useUserStore } from './modules/user';
+const pinia = createPinia();
+export { useAppStore, useUserStore };
+export default pinia;
 ```
 
 创建文件`src/store/modules/user/index.ts`
 
 ```typescript
-import { defineStore } from 'pinia'
-import piniaStore from '@/store'
+import { defineStore } from 'pinia';
+import piniaStore from '@/store';
 export const useUserStore = defineStore(
   // 唯一ID
   'user',
   {
     state: () => ({}),
     getters: {},
-    actions: {},
-  },
-)
+    actions: {}
+  }
+);
 ```
 
 ## 🤖 支持`Plop`自动生成文件
@@ -193,12 +193,12 @@ pnpm add plop
 根目录创建`plopfile.ts`
 
 ```typescript
-import { NodePlopAPI } from 'plop'
+import { NodePlopAPI } from 'plop';
 export default function (plop: NodePlopAPI) {
-  plop.setWelcomeMessage('请选择需要创建的模式：')
-  plop.setGenerator('page', require('./plop-tpls/page/prompt'))
-  plop.setGenerator('component', require('./plop-tpls/component/prompt'))
-  plop.setGenerator('store', require('./plop-tpls/store/prompt'))
+  plop.setWelcomeMessage('请选择需要创建的模式：');
+  plop.setGenerator('page', require('./plop-tpls/page/prompt'));
+  plop.setGenerator('component', require('./plop-tpls/component/prompt'));
+  plop.setGenerator('store', require('./plop-tpls/store/prompt'));
 }
 ```
 
@@ -249,28 +249,28 @@ plugins:[
   const props = defineProps({
     prefix: {
       type: String,
-      default: 'icon',
+      default: 'icon'
     },
     name: {
       type: String,
-      required: true,
+      required: true
     },
     color: {
       type: String,
-      default: '#333',
+      default: '#333'
     },
     size: {
       type: String,
-      default: 'default',
-    },
-  })
-  const symbolId = computed(() => `#${props.prefix}-${props.name}`)
+      default: 'default'
+    }
+  });
+  const symbolId = computed(() => `#${props.prefix}-${props.name}`);
   const calsses = computed(() => {
     return {
-      [`sdms-size-${props.size}`]: props.size,
-    }
-  })
-  const fontSize = reactive({ default: '32px', small: '20px', large: '48px' })
+      [`sdms-size-${props.size}`]: props.size
+    };
+  });
+  const fontSize = reactive({ default: '32px', small: '20px', large: '48px' });
 </script>
 ```
 
@@ -280,25 +280,25 @@ plugins:[
 
 ```typescript
 //封装src/api/user/index.ts
-import request from '@utils/http/axios'
-import { IResponse } from '@utils/http/axios/type'
-import { ReqAuth, ReqParams, ResResult } from './type'
+import request from '@utils/http/axios';
+import { IResponse } from '@utils/http/axios/type';
+import { ReqAuth, ReqParams, ResResult } from './type';
 enum URL {
   login = '/v1/user/login',
   permission = '/v1/user/permission',
-  userProfile = 'mock/api/userProfile',
+  userProfile = 'mock/api/userProfile'
 }
-const getUserProfile = async () => request<ReqAuth>({ url: URL.userProfile })
-const login = async (data: ReqParams) => request({ url: URL.login, data })
-const permission = async () => request<ReqAuth>({ url: URL.permission })
-export default { getUserProfile, login, permission }
+const getUserProfile = async () => request<ReqAuth>({ url: URL.userProfile });
+const login = async (data: ReqParams) => request({ url: URL.login, data });
+const permission = async () => request<ReqAuth>({ url: URL.permission });
+export default { getUserProfile, login, permission };
 ```
 
 ```typescript
 //调用
-import userApi from '@api/user'
+import userApi from '@api/user';
 // setup模式下组件可以直接引用
-const res = await userApi.profile()
+const res = await userApi.profile();
 ```
 
 ## 👽 自动生成`router`，过滤`components`组件
@@ -306,17 +306,17 @@ const res = await userApi.profile()
 支持`vue-router4.0`的模块化，通过检索 pages 文件夹可自动生成路由，并支持动态路由
 
 ```typescript
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
-import routes from 'virtual:generated-pages'
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
+import routes from 'virtual:generated-pages';
 
-console.log(routes, '打印生成自动生成的路由')
+console.log(routes, '打印生成自动生成的路由');
 //导入生成的路由数据
 const router = createRouter({
   history: createWebHashHistory(),
-  routes,
-})
+  routes
+});
 
-export default router
+export default router;
 ```
 
 ## 🧬 支持 Mock 数据
@@ -334,26 +334,26 @@ viteMockServe({
   injectCode: `
        import { setupProdMockServer } from '../mock/_createProdMockServer';
        setupProdMockServer();
-       `,
-})
+       `
+});
 ```
 
 根目录下创建 `_createProductionServer.ts`文件,非`_`开头文件会被自动加载成 mock 文件
 
 ```typescript
-import { createProdMockServer } from 'vite-plugin-mock/es/createProdMockServer'
+import { createProdMockServer } from 'vite-plugin-mock/es/createProdMockServer';
 // 批量加载
-const modules = import.meta.globEager('./mock/*.ts')
+const modules = import.meta.globEager('./mock/*.ts');
 
-const mockModules: Array<string> = []
-Object.keys(modules).forEach((key) => {
+const mockModules: Array<string> = [];
+Object.keys(modules).forEach(key => {
   if (key.includes('/_')) {
-    return
+    return;
   }
-  mockModules.push(...modules[key].default)
-})
+  mockModules.push(...modules[key].default);
+});
 export function setupProdMockServer() {
-  createProdMockServer(mockModules)
+  createProdMockServer(mockModules);
 }
 ```
 
@@ -383,27 +383,27 @@ import {
   API_BASE_URL,
   API_TARGET_URL,
   MOCK_API_BASE_URL,
-  MOCK_API_TARGET_URL,
-} from '@config/constant'
-import { ProxyOptions } from 'vite'
-type ProxyTargetList = Record<string, ProxyOptions>
+  MOCK_API_TARGET_URL
+} from '@config/constant';
+import { ProxyOptions } from 'vite';
+type ProxyTargetList = Record<string, ProxyOptions>;
 
 const init: ProxyTargetList = {
   // test
   [API_BASE_URL]: {
     target: API_TARGET_URL,
     changeOrigin: true,
-    rewrite: (path) => path.replace(new RegExp(`^${API_BASE_URL}`), ''),
+    rewrite: path => path.replace(new RegExp(`^${API_BASE_URL}`), '')
   },
   // mock
   [MOCK_API_BASE_URL]: {
     target: MOCK_API_TARGET_URL,
     changeOrigin: true,
-    rewrite: (path) => path.replace(new RegExp(`^${MOCK_API_BASE_URL}`), '/api'),
-  },
-}
+    rewrite: path => path.replace(new RegExp(`^${MOCK_API_BASE_URL}`), '/api')
+  }
+};
 
-export default init
+export default init;
 ```
 
 ## 🎉 其他
@@ -413,11 +413,11 @@ export default init
 
 # 使用
 
-一键三连: Star 或 Fork 或 [可视化仓库](https://github1s.com/tobe-fe-dalao/Vue3-Boilerplate)
+一键三连: Star 或 Fork
 
 ```shell
 # 拉取仓库代码
-git clone  https://github.com/tobe-fe-dalao/Vue3-Boilerplate.git
+git clone  https://github.com/hiliyongke/vue3-boilerplate.git
 
 # 进入项目文件夹
 cd Vue3-Boilerplate
@@ -435,7 +435,7 @@ pnpm run dev
 
 ```
 # clone  template 分支
-git clone -b template https://github.com/tobe-fe-dalao/Vue3-Boilerplate.git
+git clone -b template https://github.com/hiliyongke/vue3-boilerplate.git
 ```
 
 # 工具库
@@ -457,14 +457,6 @@ git clone -b template https://github.com/tobe-fe-dalao/Vue3-Boilerplate.git
 - [ViteSSG](https://github.com/antfu/vite-ssg)，SEO 优化，这个项目有点意思，大家可以玩玩这个方案，之前我都是通过服务端渲染搞 SEO，后来了解到这个可以直接在 Vue3 的服务器上生成。
 
 - [Vitest](https://github.com/vitest-dev/vitest),基于 Vite 的单元测试工具，目前迭代比较快，尤大金牌赞助。可以持续关注，不建议使用在小项目中。
-
-# UI 库
-
-- [arco-design](https://github.com/arco-design/arco-design)，字节团队新出的 UI 框架,配置层面更为灵活,`Vue3-Boilerplate`使用的就是这个,不喜欢的小伙伴可以移除
-- [semi-design](https://github.com/DouyinFE/semi-design)，抖音前端出的框架，面向经常撕逼 UI 和 FE，可以尝鲜玩玩
-- [nutui](https://github.com/jdf2e/nutui)，京东前端团队出的 UI 框架，已升级到 3.X，个人认为颜值最高并接受反驳
-- [naive-ui](https://github.com/TuSimple/naive-ui)，尤大推荐，TypeScript 语法，主题可调，这家公司挺厉害
-- 暂时就这些吧，困了,回头再补
 
 # 资料
 

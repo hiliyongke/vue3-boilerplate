@@ -1,7 +1,16 @@
 # eslint 忽略检查
 node_modules
+.vscode
+coverage
 dist
-!.prettierrc.js
+node_modules
+release
+commitlint.config.js
+.cz-config.js
+.eslintrc.js
+.prettierrc.js
+.stylelintrc.js
+.versionrc.js
 /src/assets/fonts
 /src/assets/icons
 /src/assets/images

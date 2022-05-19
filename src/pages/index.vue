@@ -76,12 +76,10 @@ const data = ref(framework);
 </template>
 
 <style lang="less" scoped>
-body {
-}
 .version {
   display: inline-block;
-  padding: 6px;
   margin-left: 6px;
+  padding: 6px;
   border-radius: 10px;
 }
 </style>

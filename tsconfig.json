@@ -20,6 +20,18 @@
       "@api/*": ["src/api/*"]
     }
   },
-  "include": [".d.ts", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "**/*.ts", "**/*.md", "plop-tpls/component/prompt.js", "plopfile.js", "tailwind.config.js", "postcss.config.js"],
+  "include": [
+    ".d.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "**/*.ts",
+    "**/*.md",
+    "plop-tpls/component/prompt.js",
+    "plopfile.js",
+    "tailwind.config.js",
+    "postcss.config.js"
+  ],
   "exclude": ["node_modules", "dist"]
 }

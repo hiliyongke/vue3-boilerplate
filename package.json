@@ -18,7 +18,10 @@
     "deps": "yarn upgrade-interactive --latest",
     "commit": "sh commit.sh",
     "release": "standard-version",
-    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
+    "release:major": "standard-version --release-as major",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "changelog": "conventional-changelog -p eslint -i CHANGELOG.md -s"
   },
   "dependencies": {
     "@arco-design/web-vue": "^2.27.1",

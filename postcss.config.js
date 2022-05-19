@@ -1,7 +1,7 @@
 module.exports = {
   plugins: {
     tailwindcss: {},
-    autoprefixer: {},
+    autoprefixer: {}
     // 'postcss-px-to-viewport': {
     //   // 需要转换的单位，默认为 px
     //   unitToConvert: 'px',
@@ -24,5 +24,5 @@ module.exports = {
     //   // 允许在媒体查询中转换 px
     //   mediaQuery: false
     // }
-  },
-}
+  }
+};

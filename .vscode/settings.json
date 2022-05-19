@@ -4,9 +4,10 @@
   "typescript.tsdk": "./node_modules/typescript/lib",
   "editor.tabSize": 2,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "files.eol": "\n",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
+    "eslint.autoFixOnSave" : true,
+    "source.fixAll.stylelint": true
   },
   "eslint.format.enable": true,
   "search.exclude": {
@@ -60,37 +61,6 @@
   "stylelint.enable": true,
   "path-intellisense.mappings": {
     "/@/": "${workspaceRoot}/src"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[less]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[vue]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true,
-      "source.fixAll.stylelint": true
-    },
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cSpell.words": [
     "vben",

@@ -1,5 +1,7 @@
 // https://stylelint.io/user-guide/rules/list/indentation/
 module.exports = {
+  fix: true,
+  formatter: 'verbose',
   extends: [
     'stylelint-config-standard',
     'stylelint-config-prettier',

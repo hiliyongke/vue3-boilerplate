@@ -1,4 +1,5 @@
 module.exports = {
+  header: '# 更新日志',
   types: [
     { type: 'feat', section: '✨ Features | 新功能' },
     { type: 'fix', section: '🐛 Bug Fixes | Bug 修复' },

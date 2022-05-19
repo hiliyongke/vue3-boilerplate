@@ -1,0 +1,19 @@
+ls:
+  src:
+    .dir: kebab-case
+    .scss: kebab-case | regex:_[a-z0-9]+
+    .less: kebab-case | regex:_[a-z0-9]+
+    .vue: PascalCase | regex:index
+    .js: kebab-case
+    .ts: kebab-case
+    .tsx: kebab-case
+    .spec.ts: kebab-case
+    .spec.tsx: kebab-case
+    .route.ts: kebab-case
+    .type.ts: kebab-case
+  src/components:
+    .dir: kebab-case | PascalCase
+ignore:
+  - node_modules
+  - dist
+  - src/sdk

@@ -62,7 +62,7 @@ module.exports = {
     }
   ],
 
-  scopes: [],
+  scopes: [{ name: 'accounts' }, { name: 'admin' }, { name: 'exampleScope' }, { name: 'changeMe' }],
   messages: {
     type: '选择一种你的提交类型:',
     scope: '选择一个scope (可选):',
@@ -75,5 +75,13 @@ module.exports = {
     confirmCommit: '确定提交说明? yes/no'
   },
   allowCustomScopes: true,
-  allowBreakingChanges: ['feat', 'fix']
+  allowBreakingChanges: ['feat', 'fix'],
+  // skip any questions you want
+  skipQuestions: ['body'],
+
+  // limit subject length
+  subjectLimit: 100
+  // breaklineChar: '|', // It is supported for fields body and footer.
+  // footerPrefix : 'ISSUES CLOSED:'
+  // askForBreakingChangeFirst : true, // default is false
 };

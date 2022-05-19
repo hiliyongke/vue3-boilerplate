@@ -2,9 +2,6 @@
   "workbench.iconTheme": "vs-seti",
   "explorer.confirmDragAndDrop": false,
   "typescript.tsdk": "./node_modules/typescript/lib",
-  "volar.tsPlugin": true,
-  "volar.tsPluginStatus": false,
-  "npm.packageManager": "pnpm",
   "editor.tabSize": 2,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "files.eol": "\n",
@@ -12,9 +9,6 @@
     "source.fixAll.eslint": true
   },
   "eslint.format.enable": true,
-  "eslint.options": {
-    "extensions": [".js", ".jsx", ".ts", ".tsx"]
-  },
   "search.exclude": {
     "**/node_modules": true,
     "**/*.log": true,
@@ -64,7 +58,6 @@
     "**/yarn.lock": true
   },
   "stylelint.enable": true,
-  "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass"],
   "path-intellisense.mappings": {
     "/@/": "${workspaceRoot}/src"
   },
@@ -134,5 +127,67 @@
     "pnpm",
     "antd",
     "lint-staged"
+  ],
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "/.babelrc"
+      ],
+      "url": "http://json.schemastore.org/babelrc"
+    },
+    {
+      "fileMatch": [
+        "lerna.json"
+      ],
+      "url": "http://json.schemastore.org/lerna.json"
+    },
+    {
+      "fileMatch": [
+        "/.huskyrc"
+      ],
+      "url": "http://json.schemastore.org/huskyrc"
+    },
+    {
+      "fileMatch": [
+        "/.csslintrc"
+      ],
+      "url": "http://json.schemastore.org/csslintrc"
+    },
+    {
+      "fileMatch": [
+        ".eslintrc"
+      ],
+      "url": "http://json.schemastore.org/eslintrc"
+    },
+    {
+      "fileMatch": [
+        ".htmlhintrc"
+      ],
+      "url": "http://json.schemastore.org/htmlhint"
+    },
+    {
+      "fileMatch": [
+        "jsconfig.json"
+      ],
+      "url": "http://json.schemastore.org/jsconfig"
+    },
+    {
+      "fileMatch": [
+        ".prettierrc"
+      ],
+      "url": "http://json.schemastore.org/prettierrc"
+    },
+    {
+      "fileMatch": [
+        ".travis.yml"
+      ],
+      "url": "http://json.schemastore.org/travis"
+    },
+    {
+      "fileMatch": [
+        ".lintstagedrc"
+      ],
+      "url": "http://json.schemastore.org/lintstagedrc.schema"
+    }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "vue3",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "author": "若尘",
   "homepage": "",
   "description": "a seed with vue standard boilerplate project",
@@ -19,7 +19,8 @@
     "release": "standard-version",
     "release:major": "standard-version --release-as major",
     "release:minor": "standard-version --release-as minor",
-    "release:patch": "standard-version --release-as patch"
+    "release:patch": "standard-version --release-as patch",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "dependencies": {
     "@arco-design/web-vue": "^2.27.1",

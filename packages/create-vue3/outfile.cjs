@@ -231,7 +231,7 @@ var require_minimist = __commonJS({
         }
       })
       if (opts['--']) {
-        argv['--'] = new Array()
+        argv['--'] = []
         notFlags.forEach(function (key2) {
           argv['--'].push(key2)
         })
@@ -13023,7 +13023,7 @@ function emptyDir(dir) {
   )
 }
 async function init() {
-  const downloadUrl = 'https://gitee.com/maleweb/Vue3-Boilerplate.git'
+  const downloadUrl = 'https://github.com/hiliyongke/Vue3-Boilerplate.git'
   const cwd = process.cwd()
   const argv = (0, import_minimist.default)(process.argv.slice(2))
   let targetDir = argv._[0]

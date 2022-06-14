@@ -3,14 +3,7 @@ node_modules
 .vscode
 coverage
 dist
-node_modules
 release
 commitlint.config.js
-.cz-config.js
-.eslintrc.js
-.prettierrc.js
-.stylelintrc.js
-.versionrc.js
-/src/assets/fonts
-/src/assets/icons
-/src/assets/images
+.*.js
+/src/assets

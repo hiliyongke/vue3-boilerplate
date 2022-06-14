@@ -78,7 +78,7 @@ function emptyDir(dir) {
 }
 
 async function init() {
-  const downloadUrl = 'https://gitee.com/maleweb/Vue3-Boilerplate.git'
+  const downloadUrl = 'https://gitee.com/hiliyongke/Vue3-Boilerplate.git'
   const cwd = process.cwd()
   const argv = minimist(process.argv.slice(2))
 

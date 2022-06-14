@@ -86,7 +86,7 @@ const ThemeChange = (val: string | number | boolean) => {
                   </a-button>
                 </a-tooltip>
                 <a
-                  href="https://github.com/MaleWeb/Vue3-Boilerplate"
+                  href="https://github.com/hiliyongke/Vue3-Boilerplate"
                   target="_bank"
                   class="block ml-6 text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
                 >

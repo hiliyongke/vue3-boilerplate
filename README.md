@@ -11,7 +11,7 @@
 - 配合 Git hooks 钩子（commit 前或提交前执行：pre-commit => npm run lint:lint-staged）
 - IDE 配置（`.editorconfig`）、ESLint 配置（`.eslintrc.js`  和  `.eslintignore`）、StyleLint 配置（`.stylelintrc`  和  `.stylelintignore`），详细请看对应的配置文件。
 
-🔌 关闭代码规范  
+🔌 关闭代码规范
 将  `src/`  目录分别加入  `.eslintignore`  和  `.stylelintignore`  进行忽略即可。
 
 ## 目录结构
@@ -454,3 +454,8 @@ pnpm run dev
 # 资料
 
 - 官方配置文档入口[vite](https://vitejs.cn/config/)、[pinia](https://pinia.vuejs.org/introduction.html)、[vue-router4](https://next.router.vuejs.org/zh/introduction.html)、[plop](https://github.com/plopjs/plop)...
+
+
+# 注意事项
+- git cz 报错的原因，需要全局安装commitizen
+npm install -g commitizen

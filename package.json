@@ -23,22 +23,21 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "dependencies": {
-    "@arco-design/web-vue": "^2.27.1",
-    "@element-plus/icons-vue": "^1.1.4",
     "@vueuse/components": "^8.5.0",
     "@vueuse/core": "^8.5.0",
     "axios": "^0.27.2",
-    "element-plus": "^2.2.0",
     "mockjs": "^1.1.0",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.14",
     "plop": "^3.1.0",
     "qs": "^6.10.3",
+    "tdesign-vue-next": "0.16.0",
     "vue": "^3.2.34",
     "vue-router": "^4.0.15"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.0.0",
+    "@ls-lint/ls-lint": "^1.11.0",
     "@types/node": "^17.0.34",
     "@types/nprogress": "^0.2.0",
     "@types/qs": "^6.9.7",
@@ -66,6 +65,7 @@
     "postcss-px-to-viewport": "^1.1.1",
     "prettier": "^2.6.2",
     "rollup-plugin-visualizer": "^5.6.0",
+    "standard-version": "^9.5.0",
     "stylelint": "^14.8.2",
     "stylelint-config-html": "^1.0.0",
     "stylelint-config-prettier": "^9.0.3",
@@ -89,9 +89,7 @@
     "vite-plugin-style-import": "^2.0.0",
     "vite-plugin-svg-icons": "^2.0.1",
     "vue-tsc": "^0.34.15",
-    "yorkie": "2.0.0",
-    "@ls-lint/ls-lint": "^1.11.0",
-    "standard-version": "^9.5.0"
+    "yorkie": "2.0.0"
   },
   "gitHooks": {
     "pre-commit": "lint-staged",

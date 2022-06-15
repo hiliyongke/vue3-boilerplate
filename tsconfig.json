@@ -11,7 +11,7 @@
     "esModuleInterop": true,
     "baseUrl": ".",
     "lib": ["esnext", "dom"],
-    "types": ["node", "element-plus/global"],
+    "types": ["node"],
     "paths": {
       "@/*": ["src/*"],
       "@config/*": ["config/*"],

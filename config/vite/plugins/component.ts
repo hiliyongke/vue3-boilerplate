@@ -4,7 +4,7 @@
  */
 import Components from 'unplugin-vue-components/vite';
 // import IconsResolver from 'unplugin-icons/resolver'
-import { ElementPlusResolver, VueUseComponentsResolver } from 'unplugin-vue-components/resolvers';
+import { TDesignResolver, VueUseComponentsResolver } from 'unplugin-vue-components/resolvers';
 export const AutoRegistryComponents = () => {
   return Components({
     // dirs: ['src/components'],
@@ -20,7 +20,7 @@ export const AutoRegistryComponents = () => {
       //   IconsResolver({
       //     componentPrefix: '',
       //   }),
-      ElementPlusResolver(),
+      TDesignResolver(),
       VueUseComponentsResolver()
     ]
   });

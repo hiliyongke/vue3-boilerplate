@@ -53,47 +53,6 @@ const ThemeChange = (val: string | number | boolean) => {
             >
               Vue3-Boilerplate
             </router-link>
-            <div class="relative items-center hidden ml-auto lg:flex">
-              <nav class="text-sm font-semibold leading-6 text-slate-700 dark:text-slate-200">
-                <ul class="flex space-x-8">
-                  <li>
-                    <router-link to="/demo" class="hover:text-sky-500 dark:hover:text-sky-400">
-                      GithubDemo
-                    </router-link>
-                  </li>
-                  <li>
-                    <router-link to="/login" class="hover:text-sky-500 dark:hover:text-sky-400">
-                      Login
-                    </router-link>
-                  </li>
-                </ul>
-              </nav>
-              <div
-                class="flex items-center pl-6 ml-6 border-l border-slate-200 dark:border-slate-800"
-              >
-                <a-tooltip :content="theme === 'light' ? '设置暗黑主题' : '设置明亮主题'">
-                  <a-button
-                    size="mini"
-                    class="nav-btn"
-                    type="outline"
-                    :shape="'circle'"
-                    @click="toggleTheme"
-                  >
-                    <template #icon>
-                      <icon-moon-fill v-if="theme === 'dark'" />
-                      <icon-sun-fill v-else />
-                    </template>
-                  </a-button>
-                </a-tooltip>
-                <a
-                  href="https://github.com/hiliyongke/Vue3-Boilerplate"
-                  target="_bank"
-                  class="block ml-6 text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
-                >
-                  <SvgIcon name="svg-github" size="small" color="#999999" />
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>

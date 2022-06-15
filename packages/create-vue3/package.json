@@ -18,13 +18,12 @@
     "vite",
     "Vue3-Boilerplate"
   ],
-  "homepage": "https://github.com/study-vue3/Vue3-Boilerplate/tree/main/packages/create-Vue3-Boilerplate#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/study-vue3/Vue3-Boilerplate.git",
-    "directory": "packages/create-Vue3-Boilerplate"
+    "url": "https://github.com/hiliyongke/vue3-boilerplate",
+    "directory": "packages/create-vue3"
   },
-  "author": "liulei",
+  "author": "liyongke",
   "license": "MIT",
   "devDependencies": {
     "esbuild": "^0.14.14",

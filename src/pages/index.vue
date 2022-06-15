@@ -29,9 +29,7 @@ const data = ref(framework);
       </div>
     </main>
     <article class="space-y-20 sm:space-y-32 md:space-y-40 lg:space-y-44">
-      <ul
-        class="flex flex-wrap items-center justify-center py-6 sm:px-20 lg:px-36 xl:px-52 sm:justify-start lg:justify-start"
-      >
+      <ul class="flex flex-wrap items-center justify-center sm:justify-start lg:justify-start">
         <li
           v-for="(item, index) in data"
           :key="index * 1.1"

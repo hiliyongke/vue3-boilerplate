@@ -38,7 +38,9 @@ const ThemeChange = (val: string | number | boolean) => {
 </script>
 
 <template>
-  <header class="antialiased bg-white Male text-slate-500 dark:text-slate-400 dark:bg-slate-900">
+  <header
+    class="antialiased bg-white Male text-slate-500 dark:text-slate-400 dark:bg-slate-900"
+  >
     <div
       class="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent"
     >
@@ -46,7 +48,9 @@ const ThemeChange = (val: string | number | boolean) => {
         <div
           class="px-4 py-4 border-b border-slate-900/10 lg:px-8 lg:border-0 dark:border-slate-300/10"
         >
-          <div class="relative flex items-center text-2xl sm:text-2xl font-blimone">
+          <div
+            class="relative flex items-center text-2xl sm:text-2xl font-blimone"
+          >
             <router-link
               to="/"
               class="mr-3 flex-none w-[2.0625rem] md:w-auto leading-6 dark:text-slate-200"
@@ -67,8 +71,8 @@ const ThemeChange = (val: string | number | boolean) => {
   font-variant-ligatures: none;
   code {
     color: #0f172a;
-    font-family: Fira Code VF, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-      Liberation Mono, Courier New, monospace;
+    font-family: Fira Code VF, ui-monospace, SFMono-Regular, Menlo, Monaco,
+      Consolas, Liberation Mono, Courier New, monospace;
     &::before {
       content: '`';
     }

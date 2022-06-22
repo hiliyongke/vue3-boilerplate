@@ -11,7 +11,9 @@ const data = ref(framework);
 <template>
   <div>
     <Header />
-    <main class="max-w-5xl px-4 mx-auto pb-22 sm:px-6 md:px-8 xl:px-12 xl:max-w-6xl">
+    <main
+      class="max-w-5xl px-4 mx-auto pb-22 sm:px-6 md:px-8 xl:px-12 xl:max-w-6xl"
+    >
       <div class="pt-8 pb-7 sm:pb-8 sm:text-center">
         <h1
           class="relative mb-4 text-4xl tracking-tight font-blimone sm:text-5xl lg:text-6xl text-slate-900 dark:text-slate-200"
@@ -29,7 +31,9 @@ const data = ref(framework);
       </div>
     </main>
     <article class="space-y-20 sm:space-y-32 md:space-y-40 lg:space-y-44">
-      <ul class="flex flex-wrap items-center justify-center sm:justify-start lg:justify-start">
+      <ul
+        class="flex flex-wrap items-center justify-center sm:justify-start lg:justify-start"
+      >
         <li
           v-for="(item, index) in data"
           :key="index * 1.1"
@@ -49,7 +53,11 @@ const data = ref(framework);
               <div
                 class="flex items-center justify-center flex-none bg-white rounded-full w-14 h-14"
               >
-                <img :src="item.avatar" class="w-12 h-12 rounded-full" loading="lazy" />
+                <img
+                  :src="item.avatar"
+                  class="w-12 h-12 rounded-full"
+                  loading="lazy"
+                />
               </div>
               <div class="flex-auto">
                 <div class="text-base font-semibold dark:text-slate-200">

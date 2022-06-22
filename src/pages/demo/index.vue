@@ -30,7 +30,9 @@ const datav = reactive([
         :class="item.bg"
       >
         <span class="inline-flex">
-          <span class="font-blimone text-9xl stacked-fractions">{{ item.num }}</span>
+          <span class="font-blimone text-9xl stacked-fractions">
+            {{ item.num }}
+          </span>
           <span class="inline-flex flex-col">
             <span class="p-4 ml-2 text-4xl font-blimone">{{ item.unit }}</span>
             <span class="ml-6 font-thin text-1xl">{{ item.text }}</span>

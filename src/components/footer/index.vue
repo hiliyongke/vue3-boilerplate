@@ -1,7 +1,7 @@
 <template>
   <a-layout-footer class="footer">
     <SvgIcon name="svg-github" size="24" style="margin-right: 10px" />
-    <router-link to="https://github.com/tobe-fe-dalao/Vue3-Boilerplate">
+    <router-link to="#">
       Vue3-Boilerplate
     </router-link>
   </a-layout-footer>

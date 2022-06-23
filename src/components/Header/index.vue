@@ -2,13 +2,11 @@
 import SvgIcon from '../SvgIcon/index.vue';
 import { ref } from 'vue';
 import { useDark, useToggle } from '@vueuse/core';
-import { useAppStore, useUserStore } from '@/store';
-import { IconMoonFill, IconSunFill } from '@arco-design/web-vue/es/icon';
+import { useAppStore } from '@/store';
 const title = ref('I want to study typescript');
 // 检测浏览器系统主题
 const darkThemeMq = window.matchMedia('(prefers-color-scheme: dark)');
 const appStore = useAppStore();
-const useStore = useUserStore();
 const theme = computed(() => {
   return appStore.theme;
 });

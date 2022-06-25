@@ -1,7 +1,7 @@
 import {
   useRoute,
   createRouter,
-  createWebHashHistory,
+  createWebHistory,
   RouteRecordRaw
 } from 'vue-router';
 
@@ -51,7 +51,7 @@ export const getActive = (maxLevel = 3): string => {
     .join('');
 };
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes: allRoutes,
   scrollBehavior() {
     return {

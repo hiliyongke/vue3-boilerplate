@@ -13,7 +13,7 @@ import { ConfigVisualizerConfig } from './visualizer';
 import { ConfigCompressPlugin } from './compress';
 import { ConfigPagesPlugin } from './pages';
 import { ConfigRestartPlugin } from './restart';
-import svgLoader from 'vite-svg-loader';
+import { ConfigSvgLoaderPlugin } from './svgLoader';
 
 export function createVitePlugins(isBuild: boolean) {
   const vitePlugins: (Plugin | Plugin[])[] = [
@@ -29,20 +29,17 @@ export function createVitePlugins(isBuild: boolean) {
     ConfigPagesPlugin(),
     // 开启.gz压缩  rollup-plugin-gzip
     ConfigCompressPlugin(),
-    // 监听配置文件改动重启
-    ConfigRestartPlugin(),
+    // vite-plugin-svg-icons
+    ConfigSvgIconsPlugin(isBuild),
     // 导入svg 自动转 vue组件
-    svgLoader()
+    ConfigSvgLoaderPlugin(),
+    // vite-plugin-mock
+    ConfigMockPlugin(isBuild),
+    // rollup-plugin-visualizer
+    ConfigVisualizerConfig(),
+    // 监听配置文件改动重启
+    ConfigRestartPlugin()
   ];
-
-  // vite-plugin-svg-icons
-  vitePlugins.push(ConfigSvgIconsPlugin(isBuild));
-
-  // vite-plugin-mock
-  vitePlugins.push(ConfigMockPlugin(isBuild));
-
-  // rollup-plugin-visualizer
-  vitePlugins.push(ConfigVisualizerConfig());
 
   return vitePlugins;
 }

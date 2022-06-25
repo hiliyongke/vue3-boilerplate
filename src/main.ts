@@ -9,6 +9,6 @@ import TDesign from 'tdesign-vue-next';
 import 'tdesign-vue-next/es/style/index.css';
 import './permission';
 
-// 支持SVG
+// 支持SVG vite-plugin-svg-icons
 import 'virtual:svg-icons-register';
 createApp(App).use(router).use(TDesign).use(piniaStore).mount('#app');

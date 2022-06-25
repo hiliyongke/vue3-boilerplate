@@ -35,7 +35,9 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
           modifyVars: generateModifyVars(),
           javascriptEnabled: true,
           // 这样就能全局使用 src/assets/styles/base.less 定义的 变量
-          additionalData: `@import "${resovePath('src/assets/styles/base.less')}";`
+          additionalData: `@import "${resovePath(
+            'src/assets/styles/base.less'
+          )}";`
         }
       }
     },

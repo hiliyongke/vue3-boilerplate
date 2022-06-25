@@ -13,6 +13,7 @@ import { ConfigVisualizerConfig } from './visualizer';
 import { ConfigCompressPlugin } from './compress';
 import { ConfigPagesPlugin } from './pages';
 import { ConfigRestartPlugin } from './restart';
+import svgLoader from 'vite-svg-loader';
 
 export function createVitePlugins(isBuild: boolean) {
   const vitePlugins: (Plugin | Plugin[])[] = [
@@ -21,7 +22,7 @@ export function createVitePlugins(isBuild: boolean) {
     // JSX支持
     vueJsx(),
     // 自动按需引入组件
-    AutoRegistryComponents(),
+    // AutoRegistryComponents(), // TODO: 目前有点问题 需要修复
     // 自动按需引入依赖
     AutoImportDeps(),
     // 自动生成路由
@@ -29,7 +30,9 @@ export function createVitePlugins(isBuild: boolean) {
     // 开启.gz压缩  rollup-plugin-gzip
     ConfigCompressPlugin(),
     // 监听配置文件改动重启
-    ConfigRestartPlugin()
+    ConfigRestartPlugin(),
+    // 导入svg 自动转 vue组件
+    svgLoader()
   ];
 
   // vite-plugin-svg-icons

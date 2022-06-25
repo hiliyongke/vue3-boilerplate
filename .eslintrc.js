@@ -24,6 +24,7 @@ module.exports = defineConfig({
   ],
   plugins: ['prettier'],
   rules: {
+    "vue/no-v-html":"off",
     'vue/script-setup-uses-vars': 'error',
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
     '@typescript-eslint/ban-ts-ignore': 'off',

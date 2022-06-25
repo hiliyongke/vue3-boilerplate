@@ -3,14 +3,11 @@ import { version } from '../../package.json';
 import SvgIcon from '@components/SvgIcon/index.vue';
 import { useAppStore } from '@/store/modules/app';
 import { framework } from './data';
-import Header from '@components/Header/index.vue';
-
 const appStore = useAppStore();
 const data = ref(framework);
 </script>
 <template>
   <div>
-    <Header />
     <main
       class="max-w-5xl px-4 mx-auto pb-22 sm:px-6 md:px-8 xl:px-12 xl:max-w-6xl"
     >
@@ -41,10 +38,11 @@ const data = ref(framework);
         >
           <figure class="flex-none shadow-lg rounded-xl w-80 md:w-xl">
             <blockquote
+              style="height: 200px"
               class="px-6 py-8 text-lg font-semibold leading-8 bg-white rounded-t-xl md:p-5 md:text-base md:leading-8 text-slate-700 dark:text-slate-300 dark:bg-slate-800 dark:highlight-white/5"
             >
               <SvgIcon name="svg-marks" />
-              <p>{{ item.content }}</p>
+              <p v-html="item.content"></p>
             </blockquote>
             <figcaption
               class="flex items-center p-6 space-x-4 leading-6 text-white md:px-10 md:py-6 bg-gradient-to-br rounded-b-xl"

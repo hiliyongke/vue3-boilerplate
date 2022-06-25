@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue';
-import Header from '@/components/Header/index.vue';
 const title = `通过TailWind快速实现<br>Github2021年年度
                     <a traget="_blank" href="https://octoverse.github.com/"><font>octoverse</font></a>`;
 const datav = reactive([
@@ -9,7 +8,7 @@ const datav = reactive([
   {
     num: 84,
     unit: '百分之',
-    text: '财富100强公司<br>使用GitHub Enterprise',
+    text: '财富100强公司<br/>使用GitHub Enterprise',
     bg: 'bg-0'
   },
   { num: 61, unit: '百万+', text: '创建的新存储库数量', bg: 'bg-0' },
@@ -17,11 +16,10 @@ const datav = reactive([
 ]);
 </script>
 <template>
-  <Header />
   <section class="container max-w-screen-xl px-6 mx-auto 2xl:px-0">
     <div class="flex flex-wrap">
       <div class="flex w-1/2 p-20 bg-white">
-        <h2 class="font-sans text-4xl">{{ title }}</h2>
+        <h2 class="font-sans text-4xl" v-html="title"></h2>
       </div>
       <div
         v-for="(item, index) in datav"
@@ -35,7 +33,7 @@ const datav = reactive([
           </span>
           <span class="inline-flex flex-col">
             <span class="p-4 ml-2 text-4xl font-blimone">{{ item.unit }}</span>
-            <span class="ml-6 font-thin text-1xl">{{ item.text }}</span>
+            <span class="ml-6 font-thin text-1xl" v-html="item.text"></span>
           </span>
         </span>
       </div>

@@ -31,7 +31,8 @@
     "plop-tpls/component/prompt.js",
     "plopfile.js",
     "tailwind.config.js",
-    "postcss.config.js"
+    "postcss.config.js",
+    "./components.d.ts"
   ],
   "exclude": ["node_modules", "dist"]
 }

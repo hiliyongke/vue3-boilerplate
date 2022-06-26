@@ -1,16 +1,16 @@
 import {
   useRoute,
   createRouter,
-  createWebHistory,
+  createWebHashHistory,
   RouteRecordRaw
 } from 'vue-router';
 
 import baseRouters from './modules/base';
 import componentsRouters from './modules/components';
 import othersRouters from './modules/others';
+import routes from 'virtual:generated-pages';
 
 // 关于单层路由，meta 中设置 { single: true } 即可为单层路由，{ hidden: true } 即可在侧边栏隐藏该路由
-
 // 存放动态路由
 export const asyncRouterList: Array<RouteRecordRaw> = [
   ...baseRouters,
@@ -50,8 +50,9 @@ export const getActive = (maxLevel = 3): string => {
     .map((item: string) => `/${item}`)
     .join('');
 };
+
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: allRoutes,
   scrollBehavior() {
     return {

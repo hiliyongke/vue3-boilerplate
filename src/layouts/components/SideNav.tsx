@@ -3,8 +3,8 @@ import { useRouter } from 'vue-router';
 import { prefix } from '@/config/global';
 import pgk from '../../../package.json';
 import MenuContent from './MenuContent';
-import tLogo from '@/assets/icons/svg/assets-t-logo.svg?component';
-import tLogoFull from '@/assets/icons/svg/assets-logo-full.svg?component';
+import Logo from '@/assets/icons/svg/assets-t-logo.svg?component';
+import LogoFull from '@/assets/icons/svg/assets-logo-full.svg?component';
 import { useSettingStore } from '@/store';
 import { getActive } from '@/router';
 
@@ -54,8 +54,8 @@ const useComputed = props => {
 export default defineComponent({
   name: 'SideNav',
   components: {
-    tLogoFull,
-    tLogo
+    LogoFull,
+    Logo
   },
   props: {
     menu: {
@@ -139,9 +139,9 @@ export default defineComponent({
                   onClick={this.goHome}
                 >
                   {this.collapsed ? (
-                    <tLogo class={`${prefix}-side-nav-logo-t-logo`} />
+                    <Logo class={`${prefix}-side-nav-logo-t-logo`} />
                   ) : (
-                    <t-logo-full
+                    <logo-full
                       class={`${prefix}-side-nav-logo-tdesign-logo`}
                     />
                   )}

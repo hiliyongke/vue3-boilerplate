@@ -32,7 +32,6 @@
     "plopfile.js",
     "tailwind.config.js",
     "postcss.config.js",
-    "./components.d.ts"
   ],
   "exclude": ["node_modules", "dist"]
 }

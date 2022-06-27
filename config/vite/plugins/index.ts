@@ -6,7 +6,7 @@ import type { Plugin } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import { ConfigSvgIconsPlugin } from './svgIcons';
-import { AutoRegistryComponents } from './component';
+import { AutoRegistryComponents } from './autoRegistryComponents';
 import { AutoImportDeps } from './autoImport';
 import { ConfigMockPlugin } from './mock';
 import { ConfigVisualizerConfig } from './visualizer';
@@ -22,7 +22,7 @@ export function createVitePlugins(isBuild: boolean) {
     // JSX支持
     vueJsx(),
     // 自动按需引入组件
-    // AutoRegistryComponents(), // TODO: 目前有点问题 需要修复
+    AutoRegistryComponents(),
     // 自动按需引入依赖
     AutoImportDeps(),
     // 自动生成路由

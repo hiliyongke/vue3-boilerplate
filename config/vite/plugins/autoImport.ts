@@ -1,5 +1,5 @@
 /**
- * @name AutoImportDeps
+ * @name AutoImport
  * @description setup语法让我们不用再一个一个的把变量和方法都 return 出去就能在模板上使用，大大的解放了我们的双手。然而对于一些常用的VueAPI，比如 ref、computed、watch 等，还是每次都需要我们在页面上手动进行 import。我们可以通过 unplugin-auto-import 实现自动导入，无需 import 即可在文件里使用Vue的API
  */
 

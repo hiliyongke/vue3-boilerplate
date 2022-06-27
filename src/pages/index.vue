@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { version } from '../../package.json';
-import SvgIcon from '@components/SvgIcon/index.vue';
+import SvgIcon from '../components/SvgIcon/index.vue';
 import { useAppStore } from '@/store/modules/app';
 import { framework } from './data';
 const appStore = useAppStore();

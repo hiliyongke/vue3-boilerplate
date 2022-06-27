@@ -35,7 +35,6 @@ declare module '@vue/runtime-core' {
     TLayout: typeof import('tdesign-vue-next')['Layout']
     TList: typeof import('tdesign-vue-next')['List']
     TListItem: typeof import('tdesign-vue-next')['ListItem']
-    TListItemMeta: typeof import('tdesign-vue-next')['ListItemMeta']
     TLoading: typeof import('tdesign-vue-next')['Loading']
     TMenu: typeof import('tdesign-vue-next')['Menu']
     TMenuItem: typeof import('tdesign-vue-next')['MenuItem']
@@ -57,6 +56,7 @@ declare module '@vue/runtime-core' {
     TTag: typeof import('tdesign-vue-next')['Tag']
     TTextarea: typeof import('tdesign-vue-next')['Textarea']
     TTooltip: typeof import('tdesign-vue-next')['Tooltip']
+    TTree: typeof import('tdesign-vue-next')['Tree']
     TUpload: typeof import('tdesign-vue-next')['Upload']
   }
 }

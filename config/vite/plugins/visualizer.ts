@@ -5,7 +5,7 @@ export function ConfigVisualizerConfig() {
   if (ANALYSIS) {
     return visualizer({
       filename: './node_modules/.cache/visualizer/stats.html',
-      open: true,
+      open: true, // 打包后自动打开分析报告
       gzipSize: true,
       brotliSize: true
     });

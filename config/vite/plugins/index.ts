@@ -5,6 +5,7 @@
 import type { Plugin } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
+import { ConfigVueSetupExtendPlugin } from './vueSetupExtend';
 import { ConfigSvgIconsPlugin } from './svgIcons';
 import { AutoRegistryComponents } from './autoRegistryComponents';
 import { AutoImportDeps } from './autoImport';
@@ -14,6 +15,7 @@ import { ConfigCompressPlugin } from './compress';
 import { ConfigPagesPlugin } from './pages';
 import { ConfigRestartPlugin } from './restart';
 import { ConfigSvgLoaderPlugin } from './svgLoader';
+import { ConfigMarkDownPlugin } from './markdown';
 
 export function createVitePlugins(isBuild: boolean) {
   const vitePlugins: (Plugin | Plugin[])[] = [
@@ -21,6 +23,8 @@ export function createVitePlugins(isBuild: boolean) {
     vue(),
     // JSX支持
     vueJsx(),
+    // vue3 setup语法糖扩展
+    ConfigVueSetupExtendPlugin(),
     // 自动按需引入组件
     AutoRegistryComponents(),
     // 自动按需引入依赖
@@ -37,6 +41,8 @@ export function createVitePlugins(isBuild: boolean) {
     ConfigMockPlugin(isBuild),
     // rollup-plugin-visualizer
     ConfigVisualizerConfig(),
+    // 支持mackdown转vue组件
+    ConfigMarkDownPlugin(),
     // 监听配置文件改动重启
     ConfigRestartPlugin()
   ];

@@ -198,7 +198,6 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue';
 import { MessagePlugin } from 'tdesign-vue-next';
 import {
   FORM_RULES,

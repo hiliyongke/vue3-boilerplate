@@ -137,7 +137,6 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
 import { prefix } from '@/config/global';
 import {
   BASE_INFO_DATA,

@@ -220,7 +220,6 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { ValidateResultContext } from 'tdesign-vue-next';
 

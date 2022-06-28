@@ -36,8 +36,6 @@
   </span>
 </template>
 <script setup lang="ts">
-import { computed } from 'vue';
-
 const props = defineProps({
   type: String,
   describe: [String, Number],

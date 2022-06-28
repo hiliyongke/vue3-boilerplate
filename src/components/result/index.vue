@@ -9,7 +9,6 @@
   </div>
 </template>
 <script setup lang="ts">
-import { computed } from 'vue';
 import Result403Icon from '@/assets/icons/svg/assets-result-403.svg';
 import Result404Icon from '@/assets/icons/svg/assets-result-404.svg';
 import Result500Icon from '@/assets/icons/svg/assets-result-500.svg';

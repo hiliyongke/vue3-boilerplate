@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import SvgIcon from '../SvgIcon/index.vue';
-import { ref } from 'vue';
 import { useDark, useToggle } from '@vueuse/core';
 import { useAppStore } from '@/store';
 const title = ref('I want to study typescript');

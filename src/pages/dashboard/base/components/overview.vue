@@ -88,8 +88,6 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { onMounted, watch, ref, onUnmounted, nextTick, computed } from 'vue';
-
 import * as echarts from 'echarts/core';
 import {
   TooltipComponent,

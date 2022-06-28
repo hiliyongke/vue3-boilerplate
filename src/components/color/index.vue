@@ -2,7 +2,6 @@
   <div :style="style" class="color-container"></div>
 </template>
 <script setup lang="ts">
-import { computed } from 'vue';
 import { getBrandColor } from '@/config/color';
 import { useSettingStore } from '@/store';
 

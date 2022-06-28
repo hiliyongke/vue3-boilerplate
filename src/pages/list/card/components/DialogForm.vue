@@ -68,7 +68,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
 import { MessagePlugin } from 'tdesign-vue-next';
 
 const INITIAL_DATA = {

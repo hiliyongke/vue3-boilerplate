@@ -127,7 +127,6 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { SearchIcon } from 'tdesign-icons-vue-next';
 import { MessagePlugin } from 'tdesign-vue-next';

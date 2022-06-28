@@ -85,8 +85,6 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref, watch, computed } from 'vue';
-
 import * as echarts from 'echarts/core';
 import {
   TitleComponent,

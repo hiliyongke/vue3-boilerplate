@@ -160,7 +160,6 @@
   </div>
 </template>
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue';
 import { MessagePlugin } from 'tdesign-vue-next';
 import Trend from '@/components/trend/index.vue';
 import request from '@/utils/request';

@@ -66,12 +66,9 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { onMounted, watch, ref, onUnmounted, nextTick } from 'vue';
-
 import * as echarts from 'echarts/core';
 import { LineChart, BarChart } from 'echarts/charts';
 import { CanvasRenderer } from 'echarts/renderers';
-import { UsergroupIcon, FileIcon } from 'tdesign-icons-vue-next';
 import { useSettingStore } from '@/store';
 import { changeChartsTheme } from '@/utils/color';
 

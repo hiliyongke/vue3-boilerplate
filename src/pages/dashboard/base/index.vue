@@ -10,7 +10,11 @@
     <over-view class="row-container" />
   </div>
 </template>
-
+<route lang="json">
+{
+  "meta": { "title": "概览仪表盘" }
+}
+</route>
 <script lang="ts">
 export default {
   name: 'DashboardBase'

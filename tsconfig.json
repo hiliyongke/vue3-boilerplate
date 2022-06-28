@@ -11,7 +11,7 @@
     "esModuleInterop": true,
     "baseUrl": ".",
     "lib": ["esnext", "dom"],
-    "types": ["node"],
+    "types": ["node","vite-plugin-vue-layouts/client"],
     "paths": {
       "@/*": ["src/*"],
       "@config/*": ["config/*"],

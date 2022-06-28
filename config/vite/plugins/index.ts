@@ -13,6 +13,7 @@ import { ConfigMockPlugin } from './mock';
 import { ConfigVisualizerConfig } from './visualizer';
 import { ConfigCompressPlugin } from './compress';
 import { ConfigPagesPlugin } from './pages';
+import { ConfigLayoutsPlugin } from './vueLayouts';
 import { ConfigRestartPlugin } from './restart';
 import { ConfigSvgLoaderPlugin } from './svgLoader';
 import { ConfigMarkDownPlugin } from './markdown';
@@ -30,7 +31,9 @@ export function createVitePlugins(isBuild: boolean) {
     // 自动按需引入依赖
     AutoImportDeps(),
     // 自动生成路由
-    ConfigPagesPlugin(),
+    // ConfigPagesPlugin(),
+    // 布局
+    // ConfigLayoutsPlugin(),
     // 开启.gz压缩  rollup-plugin-gzip
     ConfigCompressPlugin(),
     // vite-plugin-svg-icons

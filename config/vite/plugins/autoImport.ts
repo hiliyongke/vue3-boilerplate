@@ -22,7 +22,6 @@ export const AutoImportDeps = () => {
       filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json` 生成json文件,可以不配置该项，默认就是将生成在根目录
       globalsPropValue: true // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
     },
-
     // custom resolvers
     // 可以在这自定义自己的东西，比如接口api的引入，工具函数等等
     // see https://github.com/antfu/unplugin-auto-import/pull/23/

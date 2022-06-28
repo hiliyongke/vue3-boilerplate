@@ -37,7 +37,7 @@ import { ref } from 'vue';
 import { SearchIcon } from 'tdesign-icons-vue-next';
 
 import { TREE_DATA } from './constants';
-import CommonTable from './components/CommonTable.vue';
+import CommonTable from '../components/CommonTable.vue';
 
 const filterByText = ref();
 const filterText = ref();

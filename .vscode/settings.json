@@ -1,6 +1,6 @@
 {
   "workbench.iconTheme": "vs-seti",
-  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDragAndDrop": true,
   "typescript.tsdk": "./node_modules/typescript/lib",
   "editor.tabSize": 2,
   "editor.defaultFormatter": "esbenp.prettier-vscode",

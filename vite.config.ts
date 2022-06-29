@@ -3,9 +3,8 @@ import path from 'path';
 import { createVitePlugins } from './config/vite/plugins';
 import proxy from './config/vite/proxy';
 import { VITE_DROP_CONSOLE, VITE_PORT } from './config/constant';
-import { generateModifyVars } from './config/themeConfig';
 
-function resovePath(paths: string) {
+function resolvePath(paths: string) {
   // 如何 __dirname 找不到 需要 npn install @types/node --save-dev
   return path.resolve(__dirname, paths);
 }
@@ -19,10 +18,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
-        '@config': resovePath('./config'),
-        '@components': resovePath('./src/components'),
-        '@utils': resovePath('./src/utils'),
-        '@api': resovePath('./src/api')
+        '@api': resolvePath('./src/api')
       }
     },
     // plugins
@@ -32,12 +28,9 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     css: {
       preprocessorOptions: {
         less: {
-          modifyVars: generateModifyVars(),
           javascriptEnabled: true,
-          // 这样就能全局使用 src/assets/styles/base.less 定义的 变量
-          additionalData: `@import "${resovePath(
-            'src/assets/styles/base.less'
-          )}";`
+          // 这样就能全局使用 src/style/base.less 定义的 变量
+          additionalData: `@import "${resolvePath('src/style/base.less')}";`
         }
       }
     },

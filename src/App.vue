@@ -1,40 +1,24 @@
 <template>
-  <router-view />
+  <router-view :class="[mode]" />
 </template>
 <script setup lang="ts">
-// import { useAppStore } from './store/modules/app'
-// const appStore = useAppStore()
+import config from '@/config/style';
+import { useSettingStore } from '@/store';
 
-// provide('reload', reload)
-// function reload() {
-//   isRouterAlive.value = false
-//   nextTick(() => (isRouterAlive.value = true))
-// }
+const store = useSettingStore();
 
-// const isRouterAlive = ref(true)
+const mode = computed(() => {
+  return store.displayMode;
+});
 
-// watch(
-//   () => appStore.title,
-//   () => {
-//     const title: string = appStore.title
-//     document.title = title
-//       ? `${title} - ${import.meta.env.VITE_APP_TITLE}`
-//       : import.meta.env.VITE_APP_TITLE
-//   },
-//   {
-//     immediate: true,
-//   }
-// )
+onMounted(() => {
+  store.updateConfig({ ...config });
+});
 </script>
+<style lang="less" scoped>
+@import '@/style/variables.less';
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  background-color: var(--color-bg-1);
-  right: inherit;
-  top: auto;
+#nprogress .bar {
+  background: var(--tdvns-brand-color) !important;
 }
 </style>

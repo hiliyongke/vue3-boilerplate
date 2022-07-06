@@ -1,4 +1,4 @@
 {
-  "*.{js,vue,jsx,ts,tsx}": ["npm run lint", "prettier --write", "git add"],
+  "*.{js,vue,jsx,ts,tsx}": ["npm run lint", "prettier --write"],
   "*.{vue,htm,html,css,sss,less,scss}": ["stylelint --fix"]
 }

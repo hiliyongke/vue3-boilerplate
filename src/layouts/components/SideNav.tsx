@@ -141,9 +141,7 @@ export default defineComponent({
                   {this.collapsed ? (
                     <Logo class={`${prefix}-side-nav-logo-t-logo`} />
                   ) : (
-                    <logo-full
-                      class={`${prefix}-side-nav-logo-tdesign-logo`}
-                    />
+                    <logo-full class={`${prefix}-side-nav-logo-tdesign-logo`} />
                   )}
                 </span>
               ),

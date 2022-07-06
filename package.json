@@ -5,6 +5,7 @@
   "homepage": "",
   "description": "a seed with vue standard boilerplate project",
   "scripts": {
+    "prepare": "husky install",
     "bootstrap": "pnpm install",
     "dev": "vite --mode development",
     "build": "vue-tsc --noEmit && vite build",
@@ -16,7 +17,7 @@
     "lint:css": "stylelint  src/**/*.{vue,scss,css,sass,less} --fix",
     "prettier": "prettier --write .",
     "deps": "yarn upgrade-interactive --latest",
-    "commit": "sh commit.sh",
+    "commit": "cz",
     "release": "standard-version",
     "release:major": "standard-version --release-as major",
     "release:minor": "standard-version --release-as minor",
@@ -44,7 +45,6 @@
     "vue-router": "^4.0.15"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "^17.0.0",
     "@ls-lint/ls-lint": "^1.11.0",
     "@types/node": "17.0.45",
     "@types/nprogress": "^0.2.0",
@@ -93,12 +93,7 @@
     "vite-plugin-vue-layouts": "0.6.0",
     "vite-plugin-vue-setup-extend": "0.4.0",
     "vite-svg-loader": "^3.4.0",
-    "vue-tsc": "^0.34.15",
-    "yorkie": "2.0.0"
-  },
-  "gitHooks": {
-    "pre-commit": "ls-lint && lint-staged",
-    "commit-msg": "commitlint -e $GIT_PARAMS"
+    "vue-tsc": "^0.34.15"
   },
   "config": {
     "commitizen": {

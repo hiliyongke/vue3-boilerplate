@@ -1,7 +1,10 @@
 <template>
   <t-card>
     <t-row>
-      <t-col :xs="12" :xl="9">
+      <t-col
+        :xs="12"
+        :xl="9"
+      >
         <t-card
           :bordered="false"
           title="出入库概览"
@@ -25,7 +28,10 @@
           ></div>
         </t-card>
       </t-col>
-      <t-col :xs="12" :xl="3">
+      <t-col
+        :xs="12"
+        :xl="3"
+      >
         <t-card
           :bordered="false"
           :class="{ 'dashboard-overview-card': true, 'export-panel': true }"
@@ -34,7 +40,10 @@
             <t-button>导出数据</t-button>
           </template>
           <t-row>
-            <t-col :xs="6" :xl="12">
+            <t-col
+              :xs="6"
+              :xl="12"
+            >
               <t-card
                 :bordered="false"
                 subtitle="本月出库总计（件）"
@@ -54,7 +63,10 @@
                 </div>
               </t-card>
             </t-col>
-            <t-col :xs="6" :xl="12">
+            <t-col
+              :xs="6"
+              :xl="12"
+            >
               <t-card
                 :bordered="false"
                 subtitle="本月入库总计（件）"
@@ -196,45 +208,36 @@ const onStokeDataChange = (checkedValues: string[]) => {
 
 <style lang="less" scoped>
 @import '@/style/variables.less';
-
 .dashboard-overview-card {
   :deep(.t-card__header) {
     padding-bottom: 24px;
   }
-
   :deep(.t-card__title) {
     font-size: 20px;
     font-weight: 500;
   }
-
   &.overview-panel {
     border-right: none;
   }
-
   &.export-panel {
     border-left: none;
   }
 }
-
 .inner-card {
   padding: 24px 0;
-
   :deep(.t-card__header) {
     padding-bottom: 0;
   }
-
   &__content {
     &-title {
       font-size: 36px;
       line-height: 44px;
     }
-
     &-footer {
       display: flex;
       align-items: center;
       line-height: 22px;
       color: var(--tdvns-text-color-placeholder);
-
       .trend-tag {
         margin-left: 4px;
       }

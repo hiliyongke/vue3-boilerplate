@@ -86,7 +86,7 @@ export function isWindow(val: any): val is Window {
 }
 
 export function isElement(val: unknown): val is Element {
-  return isObject(val) && !!val.tagName;
+  return isObject(val) && Boolean(val.tagName);
 }
 
 export function isMap(val: unknown): val is Map<any, any> {
@@ -100,5 +100,6 @@ export const isClient = !isServer;
 export function isUrl(path: string): boolean {
   const reg =
     /(((^https?:(?:\/\/)?)(?:[-;:&=+$,\w]+@)?[A-Za-z0-9.-]+(?::\d+)?|(?:www.|[-;:&=+$,\w]+@)[A-Za-z0-9.-]+)((?:\/[+~%/.\w-_]*)?\??(?:[-+=&;%@.\w_]*)#?(?:[\w]*))?)$/;
+
   return reg.test(path);
 }

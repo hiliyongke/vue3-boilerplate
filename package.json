@@ -88,6 +88,8 @@
     "vite-plugin-markdown": "2.0.2",
     "vite-plugin-mock": "^2.9.6",
     "vite-plugin-pages": "^0.23.0",
+    "vite-plugin-progress": "0.0.3",
+    "vite-plugin-pwa": "0.12.2",
     "vite-plugin-restart": "^0.1.1",
     "vite-plugin-svg-icons": "^2.0.1",
     "vite-plugin-vue-layouts": "0.6.0",

@@ -9,13 +9,19 @@
           clearable
         >
           <template #suffix-icon>
-            <search-icon v-if="searchValue === ''" size="20px" />
+            <search-icon
+              v-if="searchValue === ''"
+              size="20px"
+            />
           </template>
         </t-input>
       </div>
     </div>
 
-    <dialog-form v-model:visible="formDialogVisible" :data="formData" />
+    <dialog-form
+      v-model:visible="formDialogVisible"
+      :data="formData"
+    />
 
     <template v-if="pagination.total > 0 && !dataLoading">
       <div class="list-card-items">
@@ -51,8 +57,14 @@
       </div>
     </template>
 
-    <div v-else-if="dataLoading" class="list-card-loading">
-      <t-loading size="large" text="加载数据中..." />
+    <div
+      v-else-if="dataLoading"
+      class="list-card-loading"
+    >
+      <t-loading
+        size="large"
+        text="加载数据中..."
+      />
     </div>
 
     <t-dialog
@@ -156,32 +168,26 @@ const handleManageProduct = product => {
 
 <style lang="less" scoped>
 @import '@/style/variables.less';
-
 .list-card {
   height: 100%;
-
   &-operation {
     display: flex;
     justify-content: space-between;
-
     .search-input {
       width: 360px;
     }
   }
-
   &-items {
     margin-top: 14px;
     margin-bottom: 24px;
   }
-
   &-pagination {
     padding: 16px;
   }
-
   &-loading {
-    height: 100%;
-    width: 100%;
     display: flex;
+    width: 100%;
+    height: 100%;
     align-items: center;
     justify-content: center;
   }

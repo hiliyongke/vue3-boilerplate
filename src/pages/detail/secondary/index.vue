@@ -13,7 +13,10 @@
             class="secondary-msg-list"
             :split="true"
           >
-            <t-list-item v-for="(item, index) in msgDataList" :key="index">
+            <t-list-item
+              v-for="(item, index) in msgDataList"
+              :key="index"
+            >
               <p
                 :class="['content', { unread: item.status }]"
                 @click="setReadStatus(item)"
@@ -36,9 +39,19 @@
                     :overlay-style="{ margin: '6px' }"
                     :content="item.status ? '设为已读' : '设为未读'"
                   >
-                    <span class="msg-action-icon" @click="setReadStatus(item)">
-                      <t-icon v-if="!!item.status" name="queue" size="16px" />
-                      <t-icon v-else name="chat" />
+                    <span
+                      class="msg-action-icon"
+                      @click="setReadStatus(item)"
+                    >
+                      <t-icon
+                        v-if="!!item.status"
+                        name="queue"
+                        size="16px"
+                      />
+                      <t-icon
+                        v-else
+                        name="chat"
+                      />
                     </span>
                   </t-tooltip>
                   <t-tooltip
@@ -46,14 +59,20 @@
                     :overlay-style="{ margin: '6px' }"
                   >
                     <span @click="handleClickDeleteBtn(item)">
-                      <t-icon name="delete" size="16px" />
+                      <t-icon
+                        name="delete"
+                        size="16px"
+                      />
                     </span>
                   </t-tooltip>
                 </div>
               </template>
             </t-list-item>
           </t-list>
-          <div v-else class="secondary-msg-list__empty-list">
+          <div
+            v-else
+            class="secondary-msg-list__empty-list"
+          >
             <empty-icon />
             <p>暂无通知</p>
           </div>
@@ -79,7 +98,7 @@ export default {
 import { storeToRefs } from 'pinia';
 import { NOTIFICATION_TYPES } from '@/constants';
 import { NotificationItem } from '@/interface';
-import EmptyIcon from '@/assets/icons/svg/assets-empty.svg';
+import EmptyIcon from '@/assets/icons/assets-empty.svg';
 import { useNotificationStore } from '@/store';
 
 const TAB_LIST = [

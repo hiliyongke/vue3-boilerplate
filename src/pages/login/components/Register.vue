@@ -58,7 +58,10 @@
     </t-form-item>
 
     <template v-if="type == 'phone'">
-      <t-form-item class="verification-code" name="verifyCode">
+      <t-form-item
+        class="verification-code"
+        name="verifyCode"
+      >
         <t-input
           v-model="formData.verifyCode"
           size="large"
@@ -74,7 +77,10 @@
       </t-form-item>
     </template>
 
-    <t-form-item class="check-container" name="checked">
+    <t-form-item
+      class="check-container"
+      name="checked"
+    >
       <t-checkbox v-model="formData.checked">我已阅读并同意</t-checkbox>
       <span>TDesign服务协议</span>
       和
@@ -82,7 +88,13 @@
     </t-form-item>
 
     <t-form-item>
-      <t-button block size="large" type="submit">注册</t-button>
+      <t-button
+        block
+        size="large"
+        type="submit"
+      >
+        注册
+      </t-button>
     </t-form-item>
 
     <div class="switch-container">

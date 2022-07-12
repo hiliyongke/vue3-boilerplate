@@ -5,8 +5,8 @@
 </template>
 <style lang="less" scoped>
 .tdesign-wrapper {
-  height: 100vh;
   display: flex;
+  height: 100vh;
   flex-direction: column;
 }
 </style>

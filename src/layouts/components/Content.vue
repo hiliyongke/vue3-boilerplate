@@ -1,6 +1,12 @@
 <template>
-  <router-view v-if="!isRefreshing" v-slot="{ Component }">
-    <transition name="fade" mode="out-in">
+  <router-view
+    v-if="!isRefreshing"
+    v-slot="{ Component }"
+  >
+    <transition
+      name="fade"
+      mode="out-in"
+    >
       <keep-alive :include="aliveViews">
         <component :is="Component" />
       </keep-alive>
@@ -27,7 +33,6 @@ const isRefreshing = computed(() => {
 </script>
 <style lang="less" scoped>
 @import '@/style/variables';
-
 .fade-leave-active,
 .fade-enter-active {
   transition: opacity var(--tdvns-anim-duration-slow)

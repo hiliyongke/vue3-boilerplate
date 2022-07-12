@@ -1,5 +1,8 @@
 <template>
-  <img :class="className" :src="url" />
+  <img
+    :class="className"
+    :src="url"
+  />
 </template>
 <script setup lang="ts">
 const props = defineProps({
@@ -23,16 +26,13 @@ const className = computed(() => {
 </script>
 <style lang="less" scoped>
 @import url('@/style/index.less');
-
 .thumbnail {
   &-container {
     display: inline-block;
   }
-
   &-circle {
     border-radius: var(--tdvns-border-radius-50);
   }
-
   &-layout {
     width: 88px;
     height: 48px;

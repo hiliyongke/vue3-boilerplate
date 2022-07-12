@@ -14,6 +14,7 @@ import { ConfigCompressPlugin } from './compress';
 import { ConfigRestartPlugin } from './restart';
 import { ConfigSvgLoaderPlugin } from './svgLoader';
 import { ConfigMarkDownPlugin } from './markdown';
+import { ConfigProgressPlugin } from './progress';
 
 export function createVitePlugins(isBuild: boolean) {
   const vitePlugins: (Plugin | Plugin[])[] = [
@@ -37,6 +38,8 @@ export function createVitePlugins(isBuild: boolean) {
     ConfigVisualizerConfig(),
     // 支持 markdown 转 vue 组件
     ConfigMarkDownPlugin(),
+    // 构建时显示进度条
+    ConfigProgressPlugin(),
     // 监听配置文件改动重启
     ConfigRestartPlugin()
   ];

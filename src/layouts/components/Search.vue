@@ -1,5 +1,8 @@
 <template>
-  <div v-if="layout === 'side'" class="header-menu-search">
+  <div
+    v-if="layout === 'side'"
+    class="header-menu-search"
+  >
     <t-input
       :class="['header-search', { 'hover-active': isSearchFocus }]"
       placeholder="请输入搜索内容"
@@ -7,12 +10,19 @@
       @focus="changeSearchFocus(true)"
     >
       <template #prefix-icon>
-        <t-icon class="icon" name="search" size="16" />
+        <t-icon
+          class="icon"
+          name="search"
+          size="16"
+        />
       </template>
     </t-input>
   </div>
 
-  <div v-else class="header-menu-search-left">
+  <div
+    v-else
+    class="header-menu-search-left"
+  >
     <t-button
       :class="{ 'search-icon-hide': isSearchFocus }"
       theme="default"
@@ -30,7 +40,10 @@
       @blur="changeSearchFocus(false)"
     >
       <template #prefix-icon>
-        <t-icon name="search" size="16" />
+        <t-icon
+          name="search"
+          size="16"
+        />
       </template>
     </t-input>
   </div>
@@ -52,7 +65,6 @@ const changeSearchFocus = (value: boolean) => {
 </script>
 <style lang="less" scoped>
 @import '@/style/variables.less';
-
 .header-menu-search {
   display: flex;
   margin-left: 16px;
@@ -64,7 +76,6 @@ const changeSearchFocus = (value: boolean) => {
       color: var(--tdvns-brand-color) !important;
     }
   }
-
   .t-icon {
     font-size: 20px !important;
     color: var(--tdvns-text-color-primary) !important;
@@ -90,12 +101,10 @@ const changeSearchFocus = (value: boolean) => {
     }
   }
 }
-
 .t-button {
   margin: 0 8px;
   transition: opacity var(--tdvns-anim-duration-base)
     var(--tdvns-anim-time-fn-easing);
-
   .t-icon {
     font-size: 20px;
     &.general {
@@ -109,7 +118,6 @@ const changeSearchFocus = (value: boolean) => {
 .header-menu-search-left {
   display: flex;
   align-items: center;
-
   .header-search {
     width: 200px;
     transition: width var(--tdvns-anim-duration-base)

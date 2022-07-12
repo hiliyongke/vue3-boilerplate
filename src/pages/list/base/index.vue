@@ -11,7 +11,10 @@
           >
             导出合同
           </t-button>
-          <p v-if="!!selectedRowKeys.length" class="selected-count">
+          <p
+            v-if="!!selectedRowKeys.length"
+            class="selected-count"
+          >
             已选{{ selectedRowKeys.length }}项
           </p>
         </div>
@@ -90,20 +93,34 @@
             class="payment-col"
           >
             付款
-            <trend class="dashboard-item-trend" type="up" />
+            <trend
+              class="dashboard-item-trend"
+              type="up"
+            />
           </div>
           <div
             v-if="row.paymentType === CONTRACT_PAYMENT_TYPES.RECIPT"
             class="payment-col"
           >
             收款
-            <trend class="dashboard-item-trend" type="down" />
+            <trend
+              class="dashboard-item-trend"
+              type="down"
+            />
           </div>
         </template>
 
         <template #op="slotProps">
-          <a class="t-button-link" @click="handleClickDetail()">详情</a>
-          <a class="t-button-link" @click="handleClickDelete(slotProps)">
+          <a
+            class="t-button-link"
+            @click="handleClickDetail()"
+          >
+            详情
+          </a>
+          <a
+            class="t-button-link"
+            @click="handleClickDelete(slotProps)"
+          >
             删除
           </a>
         </template>
@@ -247,28 +264,23 @@ const getContainer = () => {
 
 <style lang="less" scoped>
 @import '@/style/variables';
-
 .payment-col {
   display: flex;
-
   .trend-container {
     display: flex;
     align-items: center;
     margin-left: 8px;
   }
 }
-
 .left-operation-container {
   padding: 6px 0;
   margin-bottom: 16px;
-
   .selected-count {
     display: inline-block;
     margin-left: 8px;
     color: var(--tdvns-text-color-secondary);
   }
 }
-
 .search-input {
   width: 360px;
 }

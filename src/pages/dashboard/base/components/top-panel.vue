@@ -1,6 +1,11 @@
 <template>
   <t-row :gutter="[16, 16]">
-    <t-col v-for="(item, index) in PANE_LIST" :key="item.title" :xs="6" :xl="3">
+    <t-col
+      v-for="(item, index) in PANE_LIST"
+      :key="item.title"
+      :xs="6"
+      :xl="3"
+    >
       <t-card
         :title="item.title"
         :style="{ height: '168px' }"
@@ -33,10 +38,16 @@
               height: `${resizeTime * 42}px`
             }"
           ></div>
-          <span v-else-if="index === 2" :style="{ marginTop: `-24px` }">
+          <span
+            v-else-if="index === 2"
+            :style="{ marginTop: `-24px` }"
+          >
             <usergroup-icon />
           </span>
-          <span v-else :style="{ marginTop: '-24px' }">
+          <span
+            v-else
+            :style="{ marginTop: '-24px' }"
+          >
             <file-icon />
           </span>
         </div>
@@ -169,55 +180,45 @@ watch(
 
 <style lang="less" scoped>
 @import '@/style/variables.less';
-
 .dashboard-item {
   padding: 8px;
-
   :deep(.t-card__footer) {
     padding-top: 0;
   }
-
   :deep(.t-card__title) {
     font-size: 14px;
     font-weight: 500;
   }
-
   :deep(.t-card__body) {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
-    position: relative;
   }
-
   &:hover {
     cursor: pointer;
   }
-
   &-top {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-
     > span {
       display: inline-block;
-      color: var(--tdvns-text-color-primary);
       font-size: 36px;
       line-height: 44px;
+      color: var(--tdvns-text-color-primary);
     }
   }
-
   &-bottom {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
     > .t-icon {
       cursor: pointer;
     }
   }
-
   &-block {
     display: flex;
     align-items: center;
@@ -225,16 +226,13 @@ watch(
     line-height: 22px;
     color: var(--tdvns-text-color-placeholder);
   }
-
   &-trend {
     margin-left: 8px;
   }
-
   &-left {
     position: absolute;
     top: 0;
     right: 32px;
-
     > span {
       display: inline-flex;
       align-items: center;
@@ -243,7 +241,6 @@ watch(
       height: 56px;
       background: var(--tdvns-brand-color-1);
       border-radius: 50%;
-
       .t-icon {
         font-size: 24px;
         color: var(--tdvns-brand-color);
@@ -253,20 +250,17 @@ watch(
 
   // 针对第一个卡片需要反色处理
   &--main-color {
-    background: var(--tdvns-brand-color);
     color: var(--tdvns-text-color-primary);
-
+    background: var(--tdvns-brand-color);
     :deep(.t-card__title),
     .dashboard-item-top span,
     .dashboard-item-bottom {
       color: var(--tdvns-text-color-anti);
     }
-
     .dashboard-item-block {
       color: var(--tdvns-text-color-anti);
       opacity: 0.6;
     }
-
     .dashboard-item-bottom {
       color: var(--tdvns-text-color-anti);
     }

@@ -15,6 +15,7 @@ const wsAxios = new WsAxios({
   })
 });
 // websocket请求拦截
+
 wsAxios.intercepts.request(params => {
   console.log(params, '请求拦截：params');
   return params;

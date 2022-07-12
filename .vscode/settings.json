@@ -1,15 +1,25 @@
 {
-  "workbench.iconTheme": "vs-seti",
   "explorer.confirmDragAndDrop": true,
   "typescript.tsdk": "./node_modules/typescript/lib",
   "editor.tabSize": 2,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "eslint.autoFixOnSave" : true,
     "source.fixAll.stylelint": true
   },
   "eslint.format.enable": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "html",
+    "vue",
+    "typescript",
+    "typescriptreact"
+  ],
   "search.exclude": {
     "**/node_modules": true,
     "**/*.log": true,

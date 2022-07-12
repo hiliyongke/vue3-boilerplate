@@ -1,28 +1,46 @@
 <template>
   <div class="detail-deploy">
     <t-row :gutter="16">
-      <t-col :lg="6" :xs="12">
+      <t-col
+        :lg="6"
+        :xs="12"
+      >
         <t-card title="部署趋势">
           <div class="deploy-panel-left">
-            <div id="monitorContainer" style="width: 100%; height: 265px"></div>
+            <div
+              id="monitorContainer"
+              style="width: 100%; height: 265px"
+            ></div>
           </div>
         </t-card>
       </t-col>
-      <t-col :lg="6" :xs="12">
+      <t-col
+        :lg="6"
+        :xs="12"
+      >
         <t-card title="告警情况">
           <template #option>
-            <t-radio-group default-value="dateVal" @change="onAlertChange">
+            <t-radio-group
+              default-value="dateVal"
+              @change="onAlertChange"
+            >
               <t-radio-button value="dateVal">本周</t-radio-button>
               <t-radio-button value="monthVal">本月</t-radio-button>
             </t-radio-group>
           </template>
-          <div id="dataContainer" style="width: 100%; height: 265px"></div>
+          <div
+            id="dataContainer"
+            style="width: 100%; height: 265px"
+          ></div>
         </t-card>
       </t-col>
     </t-row>
 
     <!-- 项目列表 -->
-    <t-card title="项目列表" class="container-base-margin-top">
+    <t-card
+      title="项目列表"
+      class="container-base-margin-top"
+    >
       <t-table
         :columns="columns"
         :data="data"
@@ -35,14 +53,25 @@
         <template #adminName="{ row }">
           <span>
             {{ row.adminName }}
-            <t-tag v-if="row.adminPhone" size="small">
+            <t-tag
+              v-if="row.adminPhone"
+              size="small"
+            >
               {{ row.adminPhone }}
             </t-tag>
           </span>
         </template>
         <template #op="slotProps">
-          <a :class="prefix + '-link'" @click="listClick()">管理</a>
-          <a :class="prefix + '-link'" @click="deleteClickOp(slotProps)">
+          <a
+            :class="prefix + '-link'"
+            @click="listClick()"
+          >
+            管理
+          </a>
+          <a
+            :class="prefix + '-link'"
+            @click="deleteClickOp(slotProps)"
+          >
             删除
           </a>
         </template>
@@ -52,7 +81,11 @@
       </t-table>
     </t-card>
 
-    <t-dialog v-model:visible="visible" header="基本信息" @confirm="onConfirm">
+    <t-dialog
+      v-model:visible="visible"
+      header="基本信息"
+      @confirm="onConfirm"
+    >
       <template #body>
         <div class="dialog-info-block">
           <div class="dialog-info-block">
@@ -218,12 +251,10 @@ const deleteClickOp = e => {
 
 <style lang="less" scoped>
 @import url('../base/index.less');
-
 .detail-deploy {
   :deep(.t-card) {
     padding: 8px;
   }
-
   :deep(.t-card__title) {
     font-size: 20px;
     font-weight: 500;

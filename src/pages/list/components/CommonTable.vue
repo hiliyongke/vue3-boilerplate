@@ -13,7 +13,10 @@
         <t-col :span="10">
           <t-row :gutter="[16, 24]">
             <t-col :span="4">
-              <t-form-item label="合同名称" name="name">
+              <t-form-item
+                label="合同名称"
+                name="name"
+              >
                 <t-input
                   v-model="formData.name"
                   class="form-item-content"
@@ -24,7 +27,10 @@
               </t-form-item>
             </t-col>
             <t-col :span="4">
-              <t-form-item label="合同状态" name="status">
+              <t-form-item
+                label="合同状态"
+                name="status"
+              >
                 <t-select
                   v-model="formData.status"
                   class="form-item-content"
@@ -34,7 +40,10 @@
               </t-form-item>
             </t-col>
             <t-col :span="4">
-              <t-form-item label="合同编号" name="no">
+              <t-form-item
+                label="合同编号"
+                name="no"
+              >
                 <t-input
                   v-model="formData.no"
                   class="form-item-content"
@@ -44,7 +53,10 @@
               </t-form-item>
             </t-col>
             <t-col :span="4">
-              <t-form-item label="合同类型" name="type">
+              <t-form-item
+                label="合同类型"
+                name="type"
+              >
                 <t-select
                   v-model="formData.type"
                   style="display: inline-block"
@@ -57,7 +69,10 @@
           </t-row>
         </t-col>
 
-        <t-col :span="2" class="operation-container">
+        <t-col
+          :span="2"
+          class="operation-container"
+        >
           <t-button
             theme="primary"
             type="submit"
@@ -65,7 +80,13 @@
           >
             查询
           </t-button>
-          <t-button type="reset" variant="base" theme="default">重置</t-button>
+          <t-button
+            type="reset"
+            variant="base"
+            theme="default"
+          >
+            重置
+          </t-button>
         </t-col>
       </t-row>
     </t-form>
@@ -132,19 +153,33 @@
             class="payment-col"
           >
             付款
-            <trend class="dashboard-item-trend" type="up" />
+            <trend
+              class="dashboard-item-trend"
+              type="up"
+            />
           </p>
           <p
             v-if="row.paymentType === CONTRACT_PAYMENT_TYPES.RECIPT"
             class="payment-col"
           >
             收款
-            <trend class="dashboard-item-trend" type="down" />
+            <trend
+              class="dashboard-item-trend"
+              type="down"
+            />
           </p>
         </template>
         <template #op="slotProps">
-          <a class="t-button-link" @click="rehandleClickOp(slotProps)">管理</a>
-          <a class="t-button-link" @click="handleClickDelete(slotProps)">
+          <a
+            class="t-button-link"
+            @click="rehandleClickOp(slotProps)"
+          >
+            管理
+          </a>
+          <a
+            class="t-button-link"
+            @click="handleClickDelete(slotProps)"
+          >
             删除
           </a>
         </template>
@@ -322,19 +357,16 @@ const getContainer = () => {
 <style lang="less" scoped>
 @import '@/style/variables.less';
 .list-common-table {
-  background-color: var(--tdvns-bg-color-container);
   padding: 30px 32px;
+  background-color: var(--tdvns-bg-color-container);
   border-radius: var(--tdvns-border-radius);
-
   .table-container {
     margin-top: 30px;
   }
 }
-
 .form-item-content {
   width: 100%;
 }
-
 .operation-container {
   display: flex;
   justify-content: flex-end;
@@ -350,10 +382,8 @@ const getContainer = () => {
     }
   }
 }
-
 .payment-col {
   display: flex;
-
   .trend-container {
     display: flex;
     align-items: center;

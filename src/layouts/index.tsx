@@ -288,7 +288,10 @@ export default defineComponent({
     return (
       <div>
         {layout === 'side' ? (
-          <t-layout class={this.mainLayoutCls} key="side">
+          <t-layout
+            class={this.mainLayoutCls}
+            key="side"
+          >
             <t-aside>{sidebar}</t-aside>
             <t-layout>{[header, content]}</t-layout>
           </t-layout>

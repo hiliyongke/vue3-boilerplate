@@ -5,7 +5,10 @@
     tip="抱歉，您正在使用的浏览器版本过低，无法打开当前网页。"
   >
     <div class="result-slot-container">
-      <t-button class="result-button" @click="() => $router.push('/')">
+      <t-button
+        class="result-button"
+        @click="() => $router.push('/')"
+      >
         返回首页
       </t-button>
       <div class="recommend-container">
@@ -42,7 +45,6 @@ import Thumbnail from '@/components/thumbnail/index.vue';
 
 <style lang="less" scoped>
 @import '@/style/variables.less';
-
 .result-slot-container {
   position: relative;
   display: flex;
@@ -51,23 +53,20 @@ import Thumbnail from '@/components/thumbnail/index.vue';
   justify-content: space-between;
   color: var(--tdvns-text-color-secondary);
 }
-
 .recommend-container {
   position: absolute;
+  top: 175px;
   display: flex;
+  width: 640px;
+  padding: 24px 48px;
+  background: var(--tdvns-bg-color-container);
+  border-radius: 3px;
+  box-shadow: 0px 1px 2px var(--tdvns-shadow-1);
   align-items: center;
   justify-content: space-between;
-  top: 175px;
-  padding: 24px 48px;
-  width: 640px;
-  background: var(--tdvns-bg-color-container);
-  box-shadow: 0px 1px 2px var(--tdvns-shadow-1);
-  border-radius: 3px;
 }
-
 .recommend-browser {
   display: flex;
-
   > div {
     display: flex;
     flex-direction: column;
@@ -75,12 +74,10 @@ import Thumbnail from '@/components/thumbnail/index.vue';
     justify-content: space-between;
     height: 70px;
   }
-
   > div + div {
     margin-left: 40px;
   }
 }
-
 .browser-icon {
   width: 36.67px;
   height: 36.67px;

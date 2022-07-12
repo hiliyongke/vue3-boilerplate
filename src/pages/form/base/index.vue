@@ -15,9 +15,15 @@
         <!-- 表单内容 -->
 
         <!-- 合同名称,合同类型 -->
-        <t-row class="row-gap" :gutter="[16, 24]">
+        <t-row
+          class="row-gap"
+          :gutter="[16, 24]"
+        >
           <t-col :span="6">
-            <t-form-item label="合同名称" name="name">
+            <t-form-item
+              label="合同名称"
+              name="name"
+            >
               <t-input
                 v-model="formData.name"
                 :style="{ width: '322px' }"
@@ -26,7 +32,10 @@
             </t-form-item>
           </t-col>
           <t-col :span="6">
-            <t-form-item label="合同类型" name="type">
+            <t-form-item
+              label="合同类型"
+              name="type"
+            >
               <t-select
                 v-model="formData.type"
                 :style="{ width: '322px' }"
@@ -48,20 +57,29 @@
 
           <!-- 合同收付类型 -->
           <t-col :span="8">
-            <t-form-item label="合同收付类型" name="payment">
+            <t-form-item
+              label="合同收付类型"
+              name="payment"
+            >
               <t-radio-group v-model="formData.payment">
                 <t-radio value="1">收款</t-radio>
                 <t-radio value="2">付款</t-radio>
               </t-radio-group>
               <span class="space-item"></span>
               <div>
-                <t-input placeholder="请输入金额" :style="{ width: '160px' }" />
+                <t-input
+                  placeholder="请输入金额"
+                  :style="{ width: '160px' }"
+                />
               </div>
             </t-form-item>
           </t-col>
 
           <t-col :span="6">
-            <t-form-item label="甲方" name="partyA">
+            <t-form-item
+              label="甲方"
+              name="partyA"
+            >
               <t-select
                 v-model="formData.partyA"
                 :style="{ width: '322px' }"
@@ -81,7 +99,10 @@
             </t-form-item>
           </t-col>
           <t-col :span="6">
-            <t-form-item label="乙方" name="partyB">
+            <t-form-item
+              label="乙方"
+              name="partyB"
+            >
               <t-select
                 v-model="formData.partyB"
                 :style="{ width: '322px' }"
@@ -101,7 +122,10 @@
             </t-form-item>
           </t-col>
           <t-col :span="6">
-            <t-form-item label="合同签订日期" name="signDate">
+            <t-form-item
+              label="合同签订日期"
+              name="signDate"
+            >
               <t-date-picker
                 v-model="formData.signDate"
                 :style="{ width: '322px' }"
@@ -112,7 +136,10 @@
             </t-form-item>
           </t-col>
           <t-col :span="6">
-            <t-form-item label="合同生效日期" name="startDate">
+            <t-form-item
+              label="合同生效日期"
+              name="startDate"
+            >
               <t-date-picker
                 v-model="formData.startDate"
                 :style="{ width: '322px' }"
@@ -123,7 +150,10 @@
             </t-form-item>
           </t-col>
           <t-col :span="6">
-            <t-form-item label="合同结束日期" name="endDate">
+            <t-form-item
+              label="合同结束日期"
+              name="endDate"
+            >
               <t-date-picker
                 v-model="formData.endDate"
                 :style="{ width: '322px' }"
@@ -134,7 +164,10 @@
             </t-form-item>
           </t-col>
           <t-col :span="6">
-            <t-form-item label="" name="files">
+            <t-form-item
+              label=""
+              name="files"
+            >
               <t-upload
                 v-model="formData.files"
                 action="https://service-bv448zsw-1257786608.gz.apigw.tencentcs.com/api/upload-demo"
@@ -144,7 +177,10 @@
                 :before-upload="beforeUpload"
                 @fail="handleFail"
               >
-                <t-button class="form-submit-upload-btn" variant="outline">
+                <t-button
+                  class="form-submit-upload-btn"
+                  variant="outline"
+                >
                   上传合同文件
                 </t-button>
               </t-upload>
@@ -154,7 +190,10 @@
 
         <div class="form-basic-container-title form-title-gap">其它信息</div>
 
-        <t-form-item label="备注" name="comment">
+        <t-form-item
+          label="备注"
+          name="comment"
+        >
           <t-textarea
             v-model="formData.comment"
             :height="124"
@@ -174,7 +213,11 @@
     <div class="form-submit-container">
       <div class="form-submit-sub">
         <div class="form-submit-left">
-          <t-button theme="primary" class="form-submit-confirm" type="submit">
+          <t-button
+            theme="primary"
+            class="form-submit-confirm"
+            type="submit"
+          >
             提交
           </t-button>
           <t-button

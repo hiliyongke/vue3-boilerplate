@@ -24,7 +24,10 @@
       <p class="list-card-item_detail--desc">{{ product.description }}</p>
     </template>
     <template #footer>
-      <t-avatar-group cascading="left-up" :max="2">
+      <t-avatar-group
+        cascading="left-up"
+        :max="2"
+      >
         <t-avatar>{{ typeMap[product.type - 1] }}</t-avatar>
         <t-avatar>
           <template #icon>
@@ -103,32 +106,28 @@ const handleClickDelete = (product: CardProductType) => {
 
 <style lang="less" scoped>
 @import '@/style/variables';
-
 .list-card-item {
   display: flex;
   flex-direction: column;
   cursor: pointer;
-
   &_detail {
     min-height: 140px;
-
     &--name {
       margin-bottom: 8px;
       font-size: 16px;
       font-weight: 400;
       color: var(--tdvns-text-color-primary);
     }
-
     &--desc {
-      color: var(--tdvns-text-color-secondary);
+      display: -webkit-box;
+      height: 40px;
+      overflow: hidden;
       font-size: 12px;
       line-height: 20px;
-      overflow: hidden;
+      color: var(--tdvns-text-color-secondary);
       text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
-      height: 40px;
+      -webkit-line-clamp: 2;
     }
   }
 }

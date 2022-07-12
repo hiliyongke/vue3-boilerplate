@@ -1,7 +1,16 @@
 <template>
-  <t-row :gutter="16" class="row-container">
-    <t-col :xs="12" :xl="6">
-      <t-card title="销售订单排名" class="dashboard-rank-card">
+  <t-row
+    :gutter="16"
+    class="row-container"
+  >
+    <t-col
+      :xs="12"
+      :xl="6"
+    >
+      <t-card
+        title="销售订单排名"
+        class="dashboard-rank-card"
+      >
         <template #actions>
           <t-radio-group default-value="dateVal">
             <t-radio-button value="dateVal">本周</t-radio-button>
@@ -27,15 +36,24 @@
             </span>
           </template>
           <template #operation="slotProps">
-            <a class="t-button-link" @click="rehandleClickOp(slotProps)">
+            <a
+              class="t-button-link"
+              @click="rehandleClickOp(slotProps)"
+            >
               详情
             </a>
           </template>
         </t-table>
       </t-card>
     </t-col>
-    <t-col :xs="12" :xl="6">
-      <t-card title="销售订单排名" class="dashboard-rank-card">
+    <t-col
+      :xs="12"
+      :xl="6"
+    >
+      <t-card
+        title="销售订单排名"
+        class="dashboard-rank-card"
+      >
         <template #actions>
           <t-radio-group default-value="dateVal">
             <t-radio-button value="dateVal">本周</t-radio-button>
@@ -59,7 +77,10 @@
             />
           </template>
           <template #operation="slotProps">
-            <a class="t-button-link" @click="rehandleClickOp(slotProps)">
+            <a
+              class="t-button-link"
+              @click="rehandleClickOp(slotProps)"
+            >
               详情
             </a>
           </template>
@@ -90,32 +111,27 @@ const getRankClass = (index: number) => {
 
 <style lang="less" scoped>
 @import '@/style/variables.less';
-
 .dashboard-rank-card {
   padding: 8px;
-
   :deep(.t-card__header) {
     padding-bottom: 24px;
   }
-
   :deep(.t-card__title) {
     font-size: 20px;
     font-weight: 500;
   }
 }
-
 .dashboard-rank__cell {
   display: inline-flex;
   width: 24px;
   height: 24px;
-  border-radius: 50%;
-  color: white;
   font-size: 14px;
+  font-weight: 700;
+  color: white;
   background-color: var(--tdvns-gray-color-5);
+  border-radius: 50%;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-
   &--top {
     background: var(--tdvns-brand-color);
   }

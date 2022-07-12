@@ -14,7 +14,11 @@
           stroke="currentColor"
           stroke-width="1.5"
         />
-        <path d="M8 11L8 4" stroke="currentColor" stroke-width="1.5" />
+        <path
+          d="M8 11L8 4"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
       </svg>
       <svg
         v-else
@@ -29,7 +33,11 @@
           stroke="currentColor"
           stroke-width="1.5"
         />
-        <path d="M8 5V12" stroke="currentColor" stroke-width="1.5" />
+        <path
+          d="M8 5V12"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
       </svg>
     </span>
     <span>{{ describe }}</span>
@@ -65,48 +73,42 @@ const iconCls = computed(() => ['trend-icon-container']);
 .trend {
   &-container {
     &__up {
+      display: inline-flex;
       color: var(--tdvns-error-color);
-      display: inline-flex;
       align-items: center;
       justify-content: center;
-
       .trend-icon-container {
+        margin-right: 8px;
         background: var(--tdvns-error-color-2);
-        margin-right: 8px;
       }
     }
-
     &__down {
+      display: inline-flex;
       color: var(--tdvns-success-color);
-      display: inline-flex;
       align-items: center;
       justify-content: center;
-
       .trend-icon-container {
+        margin-right: 8px;
         background: var(--tdvns-success-color-2);
-        margin-right: 8px;
       }
     }
-
     &__reverse {
-      color: #ffffff;
       display: inline-flex;
+      color: #ffffff;
       align-items: center;
       justify-content: center;
-
       .trend-icon-container {
-        background: var(--tdvns-brand-color-5);
         margin-right: 8px;
+        background: var(--tdvns-brand-color-5);
       }
     }
-
     .trend-icon-container {
-      border-radius: 50%;
       display: inline-flex;
-      align-items: center;
-      justify-content: center;
       width: 16px;
       height: 16px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

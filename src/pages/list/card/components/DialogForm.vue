@@ -14,27 +14,39 @@
         :label-width="100"
         @submit="onSubmit"
       >
-        <t-form-item label="产品名称" name="name">
+        <t-form-item
+          label="产品名称"
+          name="name"
+        >
           <t-input
             v-model="formData.name"
             :style="{ width: '480px' }"
             placeholder="请输入产品名称"
           />
         </t-form-item>
-        <t-form-item label="产品状态" name="status">
+        <t-form-item
+          label="产品状态"
+          name="status"
+        >
           <t-radio-group v-model="formData.status">
             <t-radio value="0">已停用</t-radio>
             <t-radio value="1">已启用</t-radio>
           </t-radio-group>
         </t-form-item>
-        <t-form-item label="产品描述" name="description">
+        <t-form-item
+          label="产品描述"
+          name="description"
+        >
           <t-input
             v-model="formData.description"
             :style="{ width: '480px' }"
             placeholder="请输入产品描述"
           />
         </t-form-item>
-        <t-form-item label="产品类型" name="type">
+        <t-form-item
+          label="产品类型"
+          name="type"
+        >
           <t-select
             v-model="formData.type"
             clearable
@@ -50,7 +62,10 @@
             </t-option>
           </t-select>
         </t-form-item>
-        <t-form-item label="备注" name="mark">
+        <t-form-item
+          label="备注"
+          name="mark"
+        >
           <t-textarea
             v-model="textareaValue"
             :style="{ width: '480px' }"
@@ -59,8 +74,18 @@
           />
         </t-form-item>
         <t-form-item style="float: right">
-          <t-button variant="outline" @click="onClickCloseBtn">取消</t-button>
-          <t-button theme="primary" type="submit">确定</t-button>
+          <t-button
+            variant="outline"
+            @click="onClickCloseBtn"
+          >
+            取消
+          </t-button>
+          <t-button
+            theme="primary"
+            type="submit"
+          >
+            确定
+          </t-button>
         </t-form-item>
       </t-form>
     </template>

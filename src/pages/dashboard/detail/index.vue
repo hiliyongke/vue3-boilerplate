@@ -1,6 +1,9 @@
 <template>
   <div class="dashboard-panel-detail">
-    <t-card title="本月采购申请情况" class="dashboard-detail-card">
+    <t-card
+      title="本月采购申请情况"
+      class="dashboard-detail-card"
+    >
       <t-row :gutter="[16, 16]">
         <t-col
           v-for="(item, index) in PANE_LIST_DATA"
@@ -8,7 +11,10 @@
           :xs="6"
           :xl="3"
         >
-          <t-card class="dashboard-list-card" :description="item.title">
+          <t-card
+            class="dashboard-list-card"
+            :description="item.title"
+          >
             <div class="dashboard-list-card__number">{{ item.number }}</div>
             <div class="dashboard-list-card__text">
               <div class="dashboard-list-card__text-left">
@@ -25,8 +31,14 @@
         </t-col>
       </t-row>
     </t-card>
-    <t-row :gutter="[16, 16]" class="row-margin">
-      <t-col :xs="12" :xl="9">
+    <t-row
+      :gutter="[16, 16]"
+      class="row-margin"
+    >
+      <t-col
+        :xs="12"
+        :xl="9"
+      >
         <t-card
           class="dashboard-detail-card"
           title="采购商品申请趋势"
@@ -42,10 +54,16 @@
               @change="onMaterialChange"
             />
           </template>
-          <div id="lineContainer" style="width: 100%; height: 410px"></div>
+          <div
+            id="lineContainer"
+            style="width: 100%; height: 410px"
+          ></div>
         </t-card>
       </t-col>
-      <t-col :xs="12" :xl="3">
+      <t-col
+        :xs="12"
+        :xl="3"
+      >
         <product-card
           v-for="(item, index) in PRODUCT_LIST"
           :key="index"
@@ -64,12 +82,15 @@
           :default-value="LAST_7_DAYS"
           theme="primary"
           mode="date"
-          style="display: inline-block; margin-right: 8px; width: 240px"
+          style="display: inline-block; width: 240px; margin-right: 8px"
           @change="onSatisfyChange"
         />
         <t-button class="card-date-button">导出数据</t-button>
       </template>
-      <div id="scatterContainer" style="width: 100%; height: 330px"></div>
+      <div
+        id="scatterContainer"
+        style="width: 100%; height: 330px"
+      ></div>
     </t-card>
   </div>
 </template>
@@ -186,7 +207,6 @@ const onMaterialChange = (value: string[]) => {
 
 <style lang="less" scoped>
 @import '@/style/variables.less';
-
 .row-margin {
   margin-top: 16px;
 }
@@ -194,69 +214,58 @@ const onMaterialChange = (value: string[]) => {
 // 统一增加8px;
 .dashboard-detail-card {
   padding: 8px;
-
   :deep(.t-card__title) {
     font-size: 20px;
     font-weight: 500;
   }
-
   :deep(.t-card__actions) {
     display: flex;
     align-items: center;
   }
 }
-
 .dashboard-list-card {
   display: flex;
   flex-direction: column;
   flex: 1;
   height: 170px;
   padding: 8px;
-
   :deep(.t-card__header) {
     padding-bottom: 8px;
   }
-
   :deep(.t-card__body) {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-
   &.dark {
     &:hover {
-      background: var(--tdvns-gray-color-14);
       cursor: pointer;
+      background: var(--tdvns-gray-color-14);
     }
   }
-
   &.light {
     &:hover {
-      background: var(--tdvns-gray-color-14);
       cursor: pointer;
+      background: var(--tdvns-gray-color-14);
     }
   }
-
   &__number {
     font-size: 36px;
     line-height: 44px;
     color: var(--tdvns-text-color-primary);
   }
-
   &__text {
     display: flex;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--tdvns-text-color-placeholder);
+    text-align: left;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    font-size: 14px;
-    color: var(--tdvns-text-color-placeholder);
-    text-align: left;
-    line-height: 18px;
-
     &-left {
       display: flex;
-
       .icon {
         margin: 0 8px;
       }

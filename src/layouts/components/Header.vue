@@ -14,14 +14,20 @@
         >
           <LogoFull class="t-logo" />
         </span>
-        <div v-else class="header-operate-left">
+        <div
+          v-else
+          class="header-operate-left"
+        >
           <t-button
             theme="default"
             shape="square"
             variant="text"
             @click="changeCollapsed"
           >
-            <t-icon class="collapsed-icon" name="view-list" />
+            <t-icon
+              class="collapsed-icon"
+              name="view-list"
+            />
           </t-button>
           <search :layout="layout" />
         </div>
@@ -34,12 +40,18 @@
       <template #operations>
         <div class="operations-container">
           <!-- 搜索框 -->
-          <search v-if="layout !== 'side'" :layout="layout" />
+          <search
+            v-if="layout !== 'side'"
+            :layout="layout"
+          />
 
           <!-- 全局通知 -->
           <notice />
 
-          <t-tooltip placement="bottom" content="代码仓库">
+          <t-tooltip
+            placement="bottom"
+            content="代码仓库"
+          >
             <t-button
               theme="default"
               shape="square"
@@ -49,7 +61,10 @@
               <t-icon name="logo-github" />
             </t-button>
           </t-tooltip>
-          <t-tooltip placement="bottom" content="帮助文档">
+          <t-tooltip
+            placement="bottom"
+            content="帮助文档"
+          >
             <t-button
               theme="default"
               shape="square"
@@ -59,7 +74,10 @@
               <t-icon name="help-circle" />
             </t-button>
           </t-tooltip>
-          <t-dropdown :min-column-width="135" trigger="click">
+          <t-dropdown
+            :min-column-width="135"
+            trigger="click"
+          >
             <template #dropdown>
               <t-dropdown-menu>
                 <t-dropdown-item
@@ -78,9 +96,16 @@
                 </t-dropdown-item>
               </t-dropdown-menu>
             </template>
-            <t-button class="header-user-btn" theme="default" variant="text">
+            <t-button
+              class="header-user-btn"
+              theme="default"
+              variant="text"
+            >
               <template #icon>
-                <t-icon class="header-user-avatar" name="user-circle" />
+                <t-icon
+                  class="header-user-avatar"
+                  name="user-circle"
+                />
               </template>
               <div class="header-user-account">
                 Tencent
@@ -88,9 +113,19 @@
               </div>
             </t-button>
           </t-dropdown>
-          <t-tooltip placement="bottom" content="系统设置">
-            <t-button theme="default" shape="square" variant="text">
-              <t-icon name="setting" @click="toggleSettingPanel" />
+          <t-tooltip
+            placement="bottom"
+            content="系统设置"
+          >
+            <t-button
+              theme="default"
+              shape="square"
+              variant="text"
+            >
+              <t-icon
+                name="setting"
+                @click="toggleSettingPanel"
+              />
             </t-button>
           </t-tooltip>
         </div>
@@ -105,7 +140,7 @@ import { useRouter } from 'vue-router';
 import { useSettingStore } from '@/store';
 import { getActive } from '@/router';
 import { prefix } from '@/config/global';
-import LogoFull from '@/assets/icons/svg/assets-logo-full.svg?component';
+import LogoFull from '@/assets/icons/assets-logo-full.svg?component';
 import { MenuRoute } from '@/interface';
 
 import Notice from './Notice.vue';
@@ -197,15 +232,13 @@ const navToHelper = () => {
   &-layout {
     height: 64px;
   }
-
   &-menu-fixed {
     position: fixed;
     top: 0;
     z-index: 1001;
-
     &-side {
-      left: 232px;
       right: 0;
+      left: 232px;
       z-index: 10;
       width: auto;
       transition: all 0.3s;
@@ -214,41 +247,35 @@ const navToHelper = () => {
       }
     }
   }
-
   &-logo-container {
-    cursor: pointer;
     display: inline-flex;
     height: 64px;
+    cursor: pointer;
   }
 }
 .header-menu {
   flex: 1 1 1;
   display: inline-flex;
-
   :deep(.t-menu__item) {
     min-width: unset;
     padding: 0px 16px;
   }
 }
-
 .operations-container {
   display: flex;
   align-items: center;
   margin-right: 12px;
-
   .t-popup__reference {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
   .t-button {
     margin: 0 8px;
     &.header-user-btn {
       margin: 0;
     }
   }
-
   .t-icon {
     font-size: 20px;
     &.general {
@@ -256,25 +283,21 @@ const navToHelper = () => {
     }
   }
 }
-
 .header-operate-left {
   display: flex;
   margin-left: 20px;
   align-items: normal;
   line-height: 0;
-
   .collapsed-icon {
     font-size: 20px;
   }
 }
-
 .header-logo-container {
+  display: flex;
   width: 184px;
   height: 26px;
-  display: flex;
   margin-left: 24px;
   color: var(--tdvns-text-color-primary);
-
   .t-logo {
     width: 100%;
     height: 100%;
@@ -282,12 +305,10 @@ const navToHelper = () => {
       cursor: pointer;
     }
   }
-
   &:hover {
     cursor: pointer;
   }
 }
-
 .header-user-account {
   display: inline-flex;
   align-items: center;
@@ -297,11 +318,9 @@ const navToHelper = () => {
     font-size: 16px;
   }
 }
-
 :deep(.t-head-menu__inner) {
   border-bottom: 1px solid var(--tdvns-border-level-1-color);
 }
-
 .t-menu--light {
   .header-user-account {
     color: var(--tdvns-text-color-primary);
@@ -321,16 +340,13 @@ const navToHelper = () => {
     }
   }
 }
-
 .operations-dropdown-container-item {
-  width: 100%;
   display: flex;
+  width: 100%;
   align-items: center;
-
   .t-icon {
     margin-right: 8px;
   }
-
   :deep(.t-dropdown__item) {
     .t-dropdown__item__content {
       display: flex;
@@ -342,7 +358,6 @@ const navToHelper = () => {
       font-size: 14px;
     }
   }
-
   :deep(.t-dropdown__item) {
     width: 100%;
     margin-bottom: 0px;

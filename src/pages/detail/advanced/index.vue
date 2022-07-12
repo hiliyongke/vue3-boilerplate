@@ -22,45 +22,73 @@
     </t-card>
 
     <!-- 发票进度 -->
-    <t-card title="发票进度" class="container-base-margin-top">
+    <t-card
+      title="发票进度"
+      class="container-base-margin-top"
+    >
       <t-row justify="space-between">
         <t-steps :current="updateCurrent">
-          <t-step-item title="申请提交" content="已于12月21日提交" />
-          <t-step-item title="电子发票" content="预计1～3个工作日" />
+          <t-step-item
+            title="申请提交"
+            content="已于12月21日提交"
+          />
+          <t-step-item
+            title="电子发票"
+            content="预计1～3个工作日"
+          />
           <t-step-item
             title="发票已邮寄"
             content="电子发票开出后7个工作日联系"
           />
-          <t-step-item title="完成" content />
+          <t-step-item
+            title="完成"
+            content
+          />
         </t-steps>
       </t-row>
     </t-card>
 
     <!-- 产品目录 -->
-    <t-card title="产品目录" class="container-base-margin-top">
+    <t-card
+      title="产品目录"
+      class="container-base-margin-top"
+    >
       <template #option>
         <t-radio-group default-value="dateVal">
           <t-radio-button value="dateVal">季度</t-radio-button>
           <t-radio-button value="monthVal">月份</t-radio-button>
         </t-radio-group>
       </template>
-      <t-row :gutter="16" class="product-block-container">
+      <t-row
+        :gutter="16"
+        class="product-block-container"
+      >
         <t-col :xl="4">
           <div class="product-add">
             <div class="product-sub">
-              <t-icon name="add" class="product-sub-icon" />
+              <t-icon
+                name="add"
+                class="product-sub-icon"
+              />
               <span>新增产品</span>
             </div>
           </div>
         </t-col>
-        <t-col v-for="(item, index) in PRODUCT_LIST" :key="index" :xl="4">
+        <t-col
+          v-for="(item, index) in PRODUCT_LIST"
+          :key="index"
+          :xl="4"
+        >
           <product :data="item" />
         </t-col>
       </t-row>
     </t-card>
 
     <!-- 产品采购明细 -->
-    <t-card title="产品采购明细" class="container-base-margin-top">
+    <t-card
+      title="产品采购明细"
+      class="container-base-margin-top"
+    >
       <t-table
         :columns="columns"
         :data="data"
@@ -74,7 +102,12 @@
         <template #pdName="{ row }">
           <span>
             {{ row.pdName }}
-            <t-tag v-if="row.pdType" size="small">{{ row.pdType }}</t-tag>
+            <t-tag
+              v-if="row.pdType"
+              size="small"
+            >
+              {{ row.pdType }}
+            </t-tag>
           </span>
         </template>
 
@@ -93,8 +126,16 @@
         </template>
 
         <template #op="slotProps">
-          <a :class="prefix + '-link'" @click="listClick()">管理</a>
-          <a :class="prefix + '-link'" @click="deleteClickOp(slotProps)">
+          <a
+            :class="prefix + '-link'"
+            @click="listClick()"
+          >
+            管理
+          </a>
+          <a
+            :class="prefix + '-link'"
+            @click="deleteClickOp(slotProps)"
+          >
             删除
           </a>
         </template>
@@ -105,7 +146,11 @@
       </t-table>
     </t-card>
 
-    <t-dialog v-model:visible="visible" header="基本信息" @confirm="onConfirm">
+    <t-dialog
+      v-model:visible="visible"
+      header="基本信息"
+      @confirm="onConfirm"
+    >
       <template #body>
         <div class="dialog-info-block">
           <div

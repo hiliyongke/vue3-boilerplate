@@ -6,16 +6,32 @@
           Hi，Image
           <span class="regular">下午好，今天是你加入鹅厂的第 100 天～</span>
         </div>
-        <img src="@/assets/icons/svg/assets-tencent-logo.png" class="logo" />
+        <img
+          src="@/assets/icons/assets-tencent-logo.png"
+          class="logo"
+        />
       </div>
 
-      <t-card class="user-info-list" title="个人信息">
+      <t-card
+        class="user-info-list"
+        title="个人信息"
+      >
         <template #actions>
-          <t-button theme="default" shape="square" variant="text">
-            <t-icon name="edit" size="18" />
+          <t-button
+            theme="default"
+            shape="square"
+            variant="text"
+          >
+            <t-icon
+              name="edit"
+              size="18"
+            />
           </t-button>
         </template>
-        <t-row class="content" justify="space-between">
+        <t-row
+          class="content"
+          justify="space-between"
+        >
           <t-col
             v-for="(item, index) in USER_INFO_LIST"
             :key="index"
@@ -34,10 +50,16 @@
 
       <t-card class="content-container">
         <t-tabs value="second">
-          <t-tab-panel value="first" label="内容列表">
+          <t-tab-panel
+            value="first"
+            label="内容列表"
+          >
             <p>内容列表</p>
           </t-tab-panel>
-          <t-tab-panel value="second" label="内容列表">
+          <t-tab-panel
+            value="second"
+            label="内容列表"
+          >
             <t-card
               :bordered="false"
               class="card-padding-no"
@@ -53,10 +75,16 @@
                   @change="onLineChange"
                 />
               </template>
-              <div id="lineContainer" style="width: 100%; height: 330px"></div>
+              <div
+                id="lineContainer"
+                style="width: 100%; height: 330px"
+              ></div>
             </t-card>
           </t-tab-panel>
-          <t-tab-panel value="third" label="内容列表">
+          <t-tab-panel
+            value="third"
+            label="内容列表"
+          >
             <p>内容列表</p>
           </t-tab-panel>
         </t-tabs>
@@ -70,14 +98,27 @@
         <div class="position">XXG 港澳业务拓展组员工 直客销售</div>
       </t-card>
 
-      <t-card title="团队成员" class="user-team">
+      <t-card
+        title="团队成员"
+        class="user-team"
+      >
         <template #actions>
-          <t-button theme="default" shape="square" variant="text">
-            <t-icon name="edit" size="18" />
+          <t-button
+            theme="default"
+            shape="square"
+            variant="text"
+          >
+            <t-icon
+              name="edit"
+              size="18"
+            />
           </t-button>
         </template>
         <t-list :split="false">
-          <t-list-item v-for="(item, index) in TEAM_MEMBERS" :key="index">
+          <t-list-item
+            v-for="(item, index) in TEAM_MEMBERS"
+            :key="index"
+          >
             <t-list-item-meta
               :image="item.avatar"
               :title="item.title"
@@ -87,14 +128,31 @@
         </t-list>
       </t-card>
 
-      <t-card title="服务产品" class="product-container">
+      <t-card
+        title="服务产品"
+        class="product-container"
+      >
         <template #actions>
-          <t-button theme="default" shape="square" variant="text">
-            <t-icon name="edit" size="18" />
+          <t-button
+            theme="default"
+            shape="square"
+            variant="text"
+          >
+            <t-icon
+              name="edit"
+              size="18"
+            />
           </t-button>
         </template>
-        <t-row class="content" :getters="16">
-          <t-col v-for="(item, index) in PRODUCT_LIST" :key="index" :span="3">
+        <t-row
+          class="content"
+          :getters="16"
+        >
+          <t-col
+            v-for="(item, index) in PRODUCT_LIST"
+            :key="index"
+            :span="3"
+          >
             <component :is="getIcon(item)" />
           </t-col>
         </t-row>
@@ -121,10 +179,10 @@ import { useSettingStore } from '@/store';
 import { LAST_7_DAYS } from '@/utils/date';
 import { USER_INFO_LIST, TEAM_MEMBERS, PRODUCT_LIST } from './constants';
 import { getFolderLineDataSet } from './index';
-import ProductAIcon from '@/assets/icons/svg/assets-product-1.svg';
-import ProductBIcon from '@/assets/icons/svg/assets-product-2.svg';
-import ProductCIcon from '@/assets/icons/svg/assets-product-3.svg';
-import ProductDIcon from '@/assets/icons/svg/assets-product-4.svg';
+import ProductAIcon from '@/assets/icons/assets-product-1.svg';
+import ProductBIcon from '@/assets/icons/assets-product-2.svg';
+import ProductCIcon from '@/assets/icons/assets-product-3.svg';
+import ProductDIcon from '@/assets/icons/assets-product-4.svg';
 import { changeChartsTheme } from '@/utils/color';
 
 echarts.use([

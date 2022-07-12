@@ -9,7 +9,11 @@
     @close-btn-click="handleCloseDrawer"
   >
     <div class="setting-container">
-      <t-form ref="form" :data="formData" label-align="left">
+      <t-form
+        ref="form"
+        :data="formData"
+        label-align="left"
+      >
         <div class="setting-group-title">主题模式</div>
         <t-radio-group v-model="formData.mode">
           <div
@@ -18,7 +22,10 @@
             class="setting-layout-drawer"
           >
             <div>
-              <t-radio-button :key="index" :value="item.type">
+              <t-radio-button
+                :key="index"
+                :value="item.type"
+              >
                 <component :is="getModeIcon(item.type)" />
               </t-radio-button>
               <p :style="{ textAlign: 'center', marginTop: '8px' }">
@@ -82,7 +89,10 @@
             :key="index"
             class="setting-layout-drawer"
           >
-            <t-radio-button :key="index" :value="item">
+            <t-radio-button
+              :key="index"
+              :value="item"
+            >
               <Thumbnail :src="getThumbnailUrl(item)" />
             </t-radio-button>
           </div>
@@ -112,19 +122,32 @@
         >
           <t-switch v-model="formData.showHeader" />
         </t-form-item>
-        <t-form-item label="显示 Breadcrumbs" name="showBreadcrumb">
+        <t-form-item
+          label="显示 Breadcrumbs"
+          name="showBreadcrumb"
+        >
           <t-switch v-model="formData.showBreadcrumb" />
         </t-form-item>
-        <t-form-item label="显示 Footer" name="showFooter">
+        <t-form-item
+          label="显示 Footer"
+          name="showFooter"
+        >
           <t-switch v-model="formData.showFooter" />
         </t-form-item>
-        <t-form-item label="使用 多标签Tab页" name="isUseTabsRouter">
+        <t-form-item
+          label="使用 多标签Tab页"
+          name="isUseTabsRouter"
+        >
           <t-switch v-model="formData.isUseTabsRouter" />
         </t-form-item>
       </t-form>
       <div class="setting-info">
         <p>请复制后手动修改配置文件: /src/config/style.ts</p>
-        <t-button theme="primary" variant="text" @click="handleCopy">
+        <t-button
+          theme="primary"
+          variant="text"
+          @click="handleCopy"
+        >
           复制配置项
         </t-button>
       </div>
@@ -143,9 +166,9 @@ import ColorContainer from '@/components/color/index.vue';
 import STYLE_CONFIG from '@/config/style';
 import { insertThemeStylesheet, generateColorMap } from '@/config/color';
 
-import SettingDarkIcon from '@/assets/icons/svg/assets-setting-dark.svg';
-import SettingLightIcon from '@/assets/icons/svg/assets-setting-light.svg';
-import SettingAutoIcon from '@/assets/icons/svg/assets-setting-auto.svg';
+import SettingDarkIcon from '@/assets/icons/assets-setting-dark.svg';
+import SettingLightIcon from '@/assets/icons/assets-setting-light.svg';
+import SettingAutoIcon from '@/assets/icons/assets-setting-auto.svg';
 
 const settingStore = useSettingStore();
 
@@ -248,144 +271,124 @@ watchEffect(() => {
 </script>
 <style lang="less" scoped>
 @import '@/style/variables';
-
 .tdesign-setting {
-  z-index: 100;
   position: fixed;
-  bottom: 200px;
   right: 0;
+  bottom: 200px;
+  z-index: 100;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px 0 0 20px;
   transition: transform 0.3s cubic-bezier(0.7, 0.3, 0.1, 1),
     visibility 0.3s cubic-bezier(0.7, 0.3, 0.1, 1);
-  height: 40px;
-  width: 40px;
-  border-radius: 20px 0 0 20px;
   transition: all 0.3s;
-
   .t-icon {
     margin-left: 8px;
   }
-
   .tdesign-setting-text {
-    font-size: 12px;
     display: none;
+    font-size: 12px;
   }
-
   &:hover {
     width: 96px;
-
     .tdesign-setting-text {
       display: inline-block;
     }
   }
 }
-
 .setting-layout-color-group {
   display: inline-flex;
   width: 36px;
   height: 36px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50% !important;
   padding: 6px !important;
   border: 2px solid transparent !important;
-
+  border-radius: 50% !important;
+  justify-content: center;
+  align-items: center;
   > .t-radio-button__label {
     display: inline-flex;
   }
 }
-
 .tdesign-setting-close {
   position: fixed;
-  bottom: 200px;
   right: 300px;
+  bottom: 200px;
 }
-
 .setting-group-title {
-  font-size: 14px;
-  line-height: 22px;
   margin: 32px 0 24px 0;
-  text-align: left;
   font-family: PingFang SC;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
+  line-height: 22px;
   color: var(--tdvns-text-color-primary);
+  text-align: left;
 }
-
 .setting-link {
-  cursor: pointer;
-  color: var(--tdvns-brand-color);
   margin-bottom: 8px;
+  color: var(--tdvns-brand-color);
+  cursor: pointer;
 }
-
 .setting-info {
   position: absolute;
-  padding: 24px;
   bottom: 0;
   left: 0;
-  line-height: 20px;
-  font-size: 12px;
-  text-align: center;
-  color: var(--tdvns-text-color-placeholder);
   width: 100%;
+  padding: 24px;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--tdvns-text-color-placeholder);
+  text-align: center;
   background: var(--tdvns-bg-color-container);
 }
-
 .setting-drawer-container {
   .setting-container {
     padding-bottom: 100px;
   }
   :deep(.t-radio-group.t-size-m) {
-    min-height: 32px;
     width: 100%;
     height: auto;
+    min-height: 32px;
     justify-content: space-between;
     align-items: center;
   }
-
   .setting-layout-drawer {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 16px;
-
     :deep(.t-radio-button) {
       display: inline-flex;
       max-height: 78px;
       padding: 8px;
-      border-radius: var(--tdvns-border-radius);
       border: 2px solid #e3e6eb;
+      border-radius: var(--tdvns-border-radius);
       > .t-radio-button__label {
         display: inline-flex;
       }
     }
-
     :deep(.t-is-checked) {
       border: 2px solid var(--tdvns-brand-color) !important;
     }
-
     :deep(.t-form__controls-content) {
       justify-content: end;
     }
   }
-
   :deep(.t-form__controls-content) {
     justify-content: end;
   }
 }
-
 .setting-route-theme {
   :deep(.t-form__label) {
     min-width: 310px !important;
     color: var(--tdvns-text-color-secondary);
   }
 }
-
 .setting-color-theme {
   .setting-layout-drawer {
     :deep(.t-radio-button) {
       height: 32px;
     }
-
     &:last-child {
       margin-right: 0;
     }

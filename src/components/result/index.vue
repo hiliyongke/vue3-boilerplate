@@ -9,12 +9,12 @@
   </div>
 </template>
 <script setup lang="ts">
-import Result403Icon from '@/assets/icons/svg/assets-result-403.svg';
-import Result404Icon from '@/assets/icons/svg/assets-result-404.svg';
-import Result500Icon from '@/assets/icons/svg/assets-result-500.svg';
-import ResultIeIcon from '@/assets/icons/svg/assets-result-ie.svg';
-import ResultWifiIcon from '@/assets/icons/svg/assets-result-wifi.svg';
-import ResultMaintenanceIcon from '@/assets/icons/svg/assets-result-maintenance.svg';
+import Result403Icon from '@/assets/icons/assets-result-403.svg';
+import Result404Icon from '@/assets/icons/assets-result-404.svg';
+import Result500Icon from '@/assets/icons/assets-result-500.svg';
+import ResultIeIcon from '@/assets/icons/assets-result-ie.svg';
+import ResultWifiIcon from '@/assets/icons/assets-result-wifi.svg';
+import ResultMaintenanceIcon from '@/assets/icons/assets-result-maintenance.svg';
 
 const props = defineProps({
   bgUrl: String,
@@ -44,59 +44,50 @@ const dynamicComponent = computed(() => {
 </script>
 <style lang="less" scoped>
 @import '@/style/variables';
-
 .result {
   &-link {
     color: var(--tdvns-brand-color);
     text-decoration: none;
     cursor: pointer;
-
     &:hover {
       color: var(--tdvns-brand-color);
     }
-
     &:active {
       color: var(--tdvns-brand-color);
     }
-
     &--active {
       color: var(--tdvns-brand-color);
     }
-
     &:focus {
       text-decoration: none;
     }
   }
-
   &-container {
-    min-height: 400px;
-    height: 75vh;
     display: flex;
+    height: 75vh;
+    min-height: 400px;
+    padding: 24px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 24px;
   }
-
   &-bg-img {
     width: 200px;
     color: var(--tdvns-brand-color);
   }
-
   &-title {
+    margin-top: 8px;
+    font-size: var(--tdvns-font-size-xl);
     font-style: normal;
     font-weight: 500;
-    margin-top: 8px;
-    color: var(--tdvns-text-color-primary);
-    font-size: var(--tdvns-font-size-xl);
     line-height: var(--tdvns-text-line-height-xl);
+    color: var(--tdvns-text-color-primary);
   }
-
   &-tip {
     margin: 8px 0 32px;
     font-size: var(--tdvns-font-size-base);
-    color: var(--tdvns-text-color-secondary);
     line-height: var(--tdvns-text-line-height-base);
+    color: var(--tdvns-text-color-secondary);
   }
 }
 </style>

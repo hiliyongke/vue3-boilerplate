@@ -20,7 +20,10 @@
       </div>
 
       <login v-if="type === 'login'" />
-      <register v-else @register-success="switchType('login')" />
+      <register
+        v-else
+        @register-success="switchType('login')"
+      />
       <tdesign-setting />
     </div>
 

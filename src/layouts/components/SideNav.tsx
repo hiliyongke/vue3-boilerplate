@@ -3,8 +3,8 @@ import { useRouter } from 'vue-router';
 import { prefix } from '@/config/global';
 import pgk from '../../../package.json';
 import MenuContent from './MenuContent';
-import Logo from '@/assets/icons/svg/assets-t-logo.svg?component';
-import LogoFull from '@/assets/icons/svg/assets-logo-full.svg?component';
+import Logo from '@/assets/icons/assets-t-logo.svg?component';
+import LogoFull from '@/assets/icons/assets-logo-full.svg?component';
 import { useSettingStore } from '@/store';
 import { getActive } from '@/router';
 

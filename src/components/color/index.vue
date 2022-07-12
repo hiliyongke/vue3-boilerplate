@@ -1,5 +1,8 @@
 <template>
-  <div :style="style" class="color-container"></div>
+  <div
+    :style="style"
+    class="color-container"
+  ></div>
 </template>
 <script setup lang="ts">
 import { getBrandColor } from '@/config/color';
@@ -29,9 +32,9 @@ const style = computed(() => {
 </script>
 <style lang="less" scoped>
 .color-container {
+  display: inline-block;
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  display: inline-block;
 }
 </style>

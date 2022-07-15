@@ -61,7 +61,7 @@ export const AutoRegistryComponents = () => {
   return Components({
     extensions: ['vue', 'md'],
     deep: true,
-    dts: 'src/components.d.ts',
+    dts: 'types/components.d.ts',
     directoryAsNamespace: false,
     globalNamespaces: [],
     directives: true,

@@ -6,7 +6,7 @@
 import AutoImport from 'unplugin-auto-import/vite';
 export const AutoImportDeps = () => {
   return AutoImport({
-    dts: 'src/auto-imports.d.ts', // 声明文件生成位置和文件名称
+    dts: 'types/auto-imports.d.ts', // 声明文件生成位置和文件名称
     imports: ['vue', 'pinia', 'vue-router', '@vueuse/core'],
     // 目标文件
     include: [

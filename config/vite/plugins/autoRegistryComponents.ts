@@ -12,7 +12,7 @@ export const AutoRegistryComponents = () => {
     dirs: [], // dirs这个配置的默认值就是 src/components。按需加载的文件夹,配置需要默认导入的自定义组件文件夹，该文件夹下的所有组件都会自动 import
     extensions: ['vue', 'md', 'tsx'],
     deep: true,
-    dts: 'src/components.d.ts',
+    dts: 'types/components.d.ts',
     directoryAsNamespace: true,
     globalNamespaces: [],
     directives: true,

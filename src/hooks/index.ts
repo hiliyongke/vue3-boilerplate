@@ -1,5 +1,7 @@
 import { ref, Ref, onUnmounted, onMounted } from 'vue';
 import * as echarts from 'echarts/core';
+// import { useRequest } from './request';
+// export const useRequest = useRequest;
 
 /**
  * eChart hook

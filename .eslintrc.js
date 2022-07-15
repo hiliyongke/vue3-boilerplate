@@ -1,15 +1,21 @@
+// 需要安装依赖:  npm i eslint-define-config
 const { defineConfig } = require('eslint-define-config');
 module.exports = defineConfig({
   root: true,
   env: {
     browser: true,
     node: true,
-    es6: true
+    es6: true,
+    // 解决 defineProps and defineEmits generate no-undef warnings
+    'vue/setup-compiler-macros': true
   },
+  /* 指定如何解析语法。*/
   parser: 'vue-eslint-parser',
+  /* 优先级低于parse的语法解析配置 */
   parserOptions: {
     parser: '@typescript-eslint/parser',
     ecmaVersion: 2021,
+    //模块化方案
     sourceType: 'module',
     jsxPragma: 'React',
     ecmaFeatures: {
@@ -18,7 +24,7 @@ module.exports = defineConfig({
   },
   extends: [
     'plugin:vue/vue3-recommended',
-    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended', // typescript-eslint推荐规则,
     'prettier',
     'plugin:prettier/recommended',
     './.eslintrc-auto-import.json'

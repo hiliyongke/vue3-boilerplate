@@ -3,9 +3,3 @@
 
 # 提交记录检查
 npx --no -- commitlint --edit "$1"
-
-# ls-lint检查
-# npx ls-lint
-
-# eslint检查
-npx lint-staged

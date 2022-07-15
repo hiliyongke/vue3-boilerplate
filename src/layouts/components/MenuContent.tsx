@@ -23,7 +23,6 @@ const getMenuList = (list: MenuRoute[], basePath?: string): MenuRoute[] => {
 };
 
 const renderIcon = item => {
-  console.log(item.icon);
   if (typeof item.icon === 'string') {
     return () => item.icon && <t-icon name={item.icon}></t-icon>;
   }

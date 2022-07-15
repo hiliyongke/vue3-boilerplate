@@ -3,5 +3,8 @@ import App from './App.vue';
 import router from './router';
 import piniaStore from './store';
 import './permission';
+import api from './api/index';
 
-createApp(App).use(router).use(piniaStore).mount('#app');
+const app = createApp(App);
+app.config.globalProperties.$api = api;
+app.use(router).use(piniaStore).mount('#app');

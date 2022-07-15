@@ -12,7 +12,6 @@ function resolvePath(paths: string) {
 // https://vitejs.dev/config/
 export default ({ command, mode }: ConfigEnv): UserConfig => {
   const isBuild = command === 'build';
-  console.log(command, mode);
   return {
     envDir: './config/env',
     resolve: {

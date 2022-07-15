@@ -9,8 +9,6 @@
  * ---------------------------------------------------------------
  */
 
-// 自定义
-
 import { AuthUserType } from './data-contracts';
 import { ContentType, HttpClient, RequestParams } from './http-client';
 
